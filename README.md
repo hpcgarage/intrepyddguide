@@ -6,5 +6,5 @@ Intrepydd is an ahead-of-time (AOT) compilation system for Python programmers wh
 
 - [Language Guide](./language)
 - [Getting Started (for Python Programmers)](./getting-started)
-- [Tutorial (Jupyter-based)](./jupyter-tutorial)
+- [Tutorial (Jupyter-based)](./tutorial)
 - [Frequently Asked Questions](./faq)
