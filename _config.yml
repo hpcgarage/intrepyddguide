@@ -1,1 +1,3 @@
 theme: jekyll-theme-minimal
+title: Intrepydd Docs
+description: This site is the public documentation for Intrepydd, an ahead-of-time (AOT) compilation system for high-performance programming from Python.
