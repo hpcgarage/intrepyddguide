@@ -1,0 +1,18 @@
+# opt_d2_soln.pydd
+
+def compute_d2(X: Array(float64, 2), centers: Array(float64, 2)) -> Array(float64, 2):
+    m = shape(X, 0) # type: int64
+    d = shape(X, 1) # type: int64
+    k = shape(centers, 0) # type: int64
+    
+    # Place your Intrepydd implementation here
+    D2 = zeros((m, k))
+    for i in range(m):
+        for c in range(k):
+            d2 = 0.0
+            for j in range(d):
+                d2 += (X[i, j] - centers[c, j])**2
+            D2[i, c] = d2
+    return D2
+
+# eof
