@@ -1,4 +1,8 @@
-## Welcome to GitHub Pages
+# Intrepydd v0.1 Documentation #
+
+This site is a placeholder for public documentation about Intrepydd, an ahead-of-time (AOT) compilation system for high-performance programming within Python.
+
+## (For developers) Instructions on how to edit and maintain a GitHub Pages site ##
 
 You can use the [editor on GitHub](https://github.com/hpcgarage/intrepydddocs/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
