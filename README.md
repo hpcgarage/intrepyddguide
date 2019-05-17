@@ -2,7 +2,7 @@
 
 Intrepydd is an ahead-of-time (AOT) compilation system for Python programmers who want faster code.
 
-(The remainder of this page is boilerplate.)
+> (The remainder of this page is boilerplate.)
 
 ## (For developers) Instructions on how to edit and maintain a GitHub Pages site ##
 
