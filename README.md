@@ -1,6 +1,6 @@
 # Welcome to Intrepydd! #
 
-Intrepydd is an ahead-of-time (AOT) compilation system for Python programmers who want faster code.
+Intrepydd is an ahead-of-time (AOT) programming system for Python programmers who want faster code on current hardware, and on future reconfigurable and heterogeneous systems being designed to address the challenges of post-Moore's-Law computing.
 
 **Contents**
 
