@@ -12,19 +12,19 @@ performance of low-level C/C++ code on current and future hardware platforms.
 The primary focus of the Intrepydd v0.2
 release is the development of kernels that  are amenable to
 ahead-of-time compilation and can be called from a main
-program written in Python; as such, Intrepydd v0.2 is not intended for
+program written in Python.  As a result, Intrepydd v0.2 is not intended for
 writing complete/main programs.  Intrepydd v0.2 only runs on
 multicore CPU processors, though future versions of Intrepydd under
 development also support GPUs and other accelerators.
 
 The recommended use of the Intrepydd v0.2 release in implementing a
 data analytics workflow is as follows:
-1. Create a pure Python implementation of the workflow
-2. Use profiling to identify the performance-critical code regions of the Python implementation
+1. Create a pure Python implementation of the workflow.
+2. Use profiling to identify the performance-critical code regions of the Python implementation.
 3. Restructure the code so as to create a Python function for each
-performance-critical region
+performance-critical region.
 4. Move the performance-critical functions to an Intrepydd file (.pydd
-extension)
+extension).
 5. Add type declarations for function parameters and return values;
    in some cases, additional type declarations may be needed for some
    of the internal statements in the functions.
@@ -50,32 +50,26 @@ extension)
     significant performance boosts.
 10. Repeat steps 3-10 for additional performance-critical code regions.
 
+### Data Types
 
+Intrepydd v0.2 supports three kinds of data types:
+1. Primitive types (int32, int64, float32, float64)
+2. NumPy arrays of primitive types (homogeneous -- all elements must
+   have same data type)
+3. Lists of primitive types (homogeneous -- all elements must
+have same data type).
+Cases 1. and 2. represent Intrepydd data types taht can be used in function
+parameters and return values invoked from the Python main programs.
+Case 3 represents local Intrepydd lists that cannot
+interoperate with Python lists.
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+The following code snippets show example uses of  data types in
+function headers:
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hpcgarage/intrepydddocs/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+`
+def inc(xs: Array(int32), val: int32):
+    '''
+    Increment every element in array `xs` by `vae`.
+    '''
+`
+```
