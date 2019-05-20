@@ -58,7 +58,7 @@ Intrepydd v0.2 supports three kinds of data types:
    have same data type)
 3. Lists of primitive types (homogeneous -- all elements must
 have same data type).
-Cases 1. and 2. represent Intrepydd data types taht can be used in function
+Cases 1. and 2. represent Intrepydd data types that can be used in function
 parameters and return values invoked from the Python main programs.
 Case 3 represents local Intrepydd lists that cannot
 interoperate with Python lists.
@@ -66,9 +66,14 @@ interoperate with Python lists.
 The following code snippets show example uses of  data types in
 function headers:
 ```
-def inc(xs: **Array(int32)**, val: int32):
+def inc(xs: Array(int32), val: int32):
     '''
-    Increment every element in array `xs` by `vae`.
+    Increment every element in array `xs` by `val`
     '''
+	. . .
+def sum(xs: Array(float32)) -> float64:
+    '''
+    Add up all elements in array `xs` and return their sum
+    '''	
 ```
 
