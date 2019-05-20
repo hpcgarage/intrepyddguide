@@ -66,10 +66,9 @@ interoperate with Python lists.
 The following code snippets show example uses of  data types in
 function headers:
 ```
-`
-def inc(xs: Array(int32), val: int32):
+def inc(xs: **Array(int32)**, val: int32):
     '''
     Increment every element in array `xs` by `vae`.
     '''
-`
 ```
+
