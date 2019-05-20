@@ -13,7 +13,12 @@ The primary focus of the Intrepydd v0.2
 release is the development of kernels that  are amenable to
 ahead-of-time compilation and can be called from a main
 program written in Python.  As a result, Intrepydd v0.2 is not intended for
-writing complete/main programs.  Intrepydd v0.2 only runs on
+writing complete/main programs, and has a number
+of limitations relative to standard Python as outlined below.
+However, all standard Python features can be used in the main program
+that invokes Intrepydd kernels.
+
+Intrepydd v0.2 only runs on
 multicore CPU processors, though future versions of Intrepydd under
 development also support GPUs and other accelerators.
 
@@ -22,7 +27,8 @@ data analytics workflow is as follows:
 1. Create a pure Python implementation of the workflow.
 2. Use profiling to identify the performance-critical code regions of the Python implementation.
 3. Restructure the code so as to create a Python function for each
-performance-critical region.
+performance-critical region, while ensuring that each such function
+only uses Python features supported by Intrepydd.
 4. Move the performance-critical functions to an Intrepydd file (.pydd
 extension).
 5. Add type declarations for function parameters and return values;
@@ -52,7 +58,8 @@ extension).
 
 ### Data Types
 
-Intrepydd v0.2 supports three kinds of data types:
+Intrepydd v0.2 supports three kinds of data types for
+function parameters, function return values, and variables:
 1. Primitive types (int32, int64, float32, float64)
 2. NumPy arrays of primitive types (homogeneous -- all elements must
    have same data type)
@@ -76,4 +83,18 @@ def sum(xs: Array(float32)) -> float64:
     Add up all elements in array `xs` and return their sum
     '''	
 ```
+Variable data types are inferred automatically, but in some cases an
+explicit type declaration may be needed on assignment statements by
+using a  “# type: …” pseudocomment
 
+### Statements
+
+Intrepydd v0.2 supports the following standard statements from Python:
+- Assignment statements.
+- Sequential for and while loops with optional break / continue statements.
+- Conditional if / elif / else statements.
+- Function calls (user-defined Intrepydd functions and built-in
+library calls).  Note that objects and method calls are not supported in Intrepydd v0.2.
+
+In addition, Intrepydd v0.2 supports a _parallel for_ loop (_pfor_)
+with the following syntax:
