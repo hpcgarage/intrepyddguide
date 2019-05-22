@@ -85,7 +85,7 @@ def sum(xs: Array(float32)) -> float64:
 ```
 Variable data types are inferred automatically, but in some cases an
 explicit type declaration may be needed on assignment statements by
-using a  “# type: …” pseudocomment
+using Python's type annotation (PEP 484).
 
 ### Statements
 
