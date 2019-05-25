@@ -1,4 +1,4 @@
-# Getting Started (for Python Programmers)#
+# Getting Started (for Python Programmers)
 
 We assume that you have access to an Intrepydd release with the pyddc
 command, along with a standard Python environment.

@@ -1,4 +1,4 @@
-# Intrepydd v0.2 Language Summary #
+# Intrepydd v0.2 Language Summary 
 
 
 ### Overview
