@@ -1,4 +1,4 @@
-# Tutorial (Jupyter-based) [Rich] #
+# Tutorial (Jupyter-based)#
 
 You can use Intrepydd from within Jupyter. The following collection of notebooks shows you how.
 
