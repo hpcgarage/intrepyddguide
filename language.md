@@ -7,9 +7,10 @@ Intrepydd is a Python-based programming language developed in the
 DARPA Software Defined Hardware (SDH) program to support writing
 _data analytics kernels_ with the productivity of high-level Python
 code and the
-performance of low-level C/C++ code on current and future hardware platforms.
+performance of low-level C/C++ code on current and future hardware
+platforms.  This programming guide is focused on v0.2 of Intrepydd.
 
-The primary focus of the Intrepydd v0.2
+The primary goal of the Intrepydd v0.2
 release is the development of kernels that  are amenable to
 ahead-of-time compilation and can be called from a main
 program written in Python.  As a result, Intrepydd v0.2 is not intended for
@@ -40,72 +41,67 @@ function parameters, function return values, and variables:
      some similarity to Python lists, there are many important
      differences.  Intrepydd v0.2 lists are homogeneous, i.e., all elements must
 	 have same primitive data type.
-Cases 1. and 2. represent Intrepydd data types that can be used in function
+	 
+Cases 1. and 2. above represent Intrepydd data types that can be used in function
 parameters and return values invoked from the Python main programs.
-Case 3 represents local Intrepydd lists can only be allocated and used
+Case 3 represents local Intrepydd lists which can only be allocated and used
 in Intrepydd code, and cannot
-interoperate with Python lists. 
+interoperate with Python lists.  Note that Intrepydd v0.2 does not
+support dictionaries or user-defined objects.
 
-The following code snippets show example uses of  data types in
-function headers:
-```
-def inc(xs: Array(int32), val: int32):
-    '''
-    Increment every element in array `xs` by `val`
-    '''
-	. . .
-def sum(xs: Array(float32)) -> float64:
-    '''
-    Add up all elements in array `xs` and return their sum
-    '''	
-```
 Variable data types are inferred automatically, but in some cases an
 explicit type declaration may be needed on assignment statements by
-using Python's type annotation (PEP 484, with the “# type: …” syntax).
+using Python's PEP 484 type annotation with the “# type: …” syntax.
+Support for other type annotations, e.g., PEP 526, is deferred to
+future versions of Intrepydd.
 
 ### Statements
 
-Intrepydd v0.2 supports the following standard statements from Python:
+Intrepydd v0.2 supports the following standard statement types from Python:
 - Assignment statements.
-- Sequential for and while loops with optional break / continue statements.
+- Return statements.
+- Sequential for and while loops with break / continue statements.
 - Conditional if / elif / else statements.
-- Function calls (user-defined Intrepydd functions and built-in
-library calls).  Note that objects and method calls are not supported in Intrepydd v0.2.
+- Calls to user-defined and built-in
+Intrepydd functions.  Note that objects and method calls are not supported in Intrepydd v0.2.
 
-In addition, Intrepydd v0.2 supports a _parallel for_ loop (_pfor_)
-with the following syntax:
-In addition, Intrepydd v0.2 supports a _parallel for_ loop (_pfor_)
-with the following syntax:
-```
-TO BE COMPLETED
-```
+In addition, Intrepydd v0.2 supports a _parallel for_ (_pfor_) loop
+statement, which is not available in Python.
 
 ### Expressions
 
 Intrepydd v0.2 supports the following operators, which can be used to
 write expressions:
+- Unary operators.
+- Binary operators.
 - Array element operator, _A[i0, i1, ...]_, can be used to access an
    element of a NumPy array, _A_, both as an lval and as an rval.
-- TO BE COMPLETED
+- List constructors, e.g., [1, 2, 3].
 
-### Built-in functions and Libraries
+### Optimization levels
 
-Intrepydd v0.2 supports multiple built-in functions and libraries for
-the convenience of the programmer.  The main difference between the
-two is that the Intrepydd compiler can use special knowledge of
-built-in functions during the compilation process, but libraries are
-opaque to the Intrepydd compiler.  However, to an Intrepydd
-programmer, both built-in functions and libraries can be used in a
-similar fashion.
+To enable experimentation with different optimization levels, Intrepydd
+v0.2 supports three optimization levels:
+- Level 0 (pyddc -O0): At this level, the Intrepydd compiler generates pure
+  Python code to facilitate debugging, since the combination of
+  the Python main program code and Intrepydd-generated Python kernel
+  code can be executed in a standard Python environment.
+- Level 1 (pyddc -O1): At this level, the Intrepydd compiler generates
+  Python code with annotations to make the code amenable to Numba JIT
+  compilation. built-in functions
+- Level 2 (pyddc -O2): At this level, the Intrepydd compiler generates
+  C++ code which can be compiled to a static module that can be
+  loaded by the Python main program.
 
-The built-in functions supported by Intrepydd v0.2 are as follows:
-- _shape(A, d)_ returns the lower and upper bounds for dimension _d_
-  of NumPy array _A_, as in Python
-  - _range(shape(A,d))_ generates an iteration range for all index
-  values in the range of dimension _d_
-  of NumPy array _A_, as in Python, 
-Built-in functions: range(...), len()
-NumPy: shape(arr, i), strides(arr, i), arr[i, j, …]
+Since Intrepydd is focused on high-performance code, the default
+optimization level used by the pyddc compiler is -O2.
 
-The library functions supported by Intrepydd v0.2 are as follow:
+### Built-in functions
 
+Intrepydd v0.2 supports multiple built-in functions  for
+the convenience of the programmer:  abs, acos, add, all, allclose, any, argmax, argmin, arraysub, asin, atan, cos, div, elemwise_not, empty, eq, exp, float32, float64, ge, gt, innerprod, int32, int64, isinf, isnan, le, len, log, lt, max, min, minus, mul, multiply, neq, pow, print, prod, pydd_dsyrk, range, shape, sin, sqrt, sub, sum, tan, transpose, zeros.
+
+Some of these built-in functions serve as wrappers for
+standard native libraries.  All functions are supported at the -O2
+optimization level, but not all
+built-in functions are supported at the -O0 and -O1 levels.
