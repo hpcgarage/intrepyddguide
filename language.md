@@ -71,7 +71,7 @@ statement, which is not available in Python.
 ### Expressions
 
 Intrepydd v0.2 supports the following operators, which can be used to
-write expressions:
+create expressions:
 - Unary operators.
 - Binary operators.
 - Array element operator, _A[i0, i1, ...]_, can be used to access an
@@ -99,7 +99,7 @@ optimization level used by the pyddc compiler is -O2.
 ### Built-in functions
 
 Intrepydd v0.2 supports multiple built-in functions  for
-the convenience of the programmer:  abs, acos, add, all, allclose, any, argmax, argmin, arraysub, asin, atan, cos, div, elemwise_not, empty, eq, exp, float32, float64, ge, gt, innerprod, int32, int64, isinf, isnan, le, len, log, lt, max, min, minus, mul, multiply, neq, pow, print, prod, pydd_dsyrk, range, shape, sin, sqrt, sub, sum, tan, transpose, zeros.
+the convenience of the programmer:  abs, acos, add, all, allclose, any, argmax, argmin, arraysub, asin, atan, cos, div, elemwise_not, empty, eq, exp, float32, float64, ge, gt, innerprod, int32, int64, isinf, isnan, le, len, log, lt, max, min, minus, mul, multiply, neq, pow, print, prod, range, shape, sin, sqrt, sub, sum, tan, transpose, zeros.
 
 Some of these built-in functions serve as wrappers for
 standard native libraries.  All functions are supported at the -O2

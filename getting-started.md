@@ -5,34 +5,29 @@ command, along with a standard Python environment.
 
 The recommended use of the Intrepydd v0.2 release in implementing a
 data analytics workflow is as follows:
-1. Create a pure Python implementation of the workflow.
-2. Use profiling to identify the performance-critical code regions of the Python implementation.
-3. Restructure the code so as to create a Python function for each
-performance-critical region, while ensuring that each such function
-only uses Python features supported by Intrepydd.
-4. Move the performance-critical functions to an Intrepydd file (.pydd
+1. Create a pure Python implementation of the workflow, using
+standard libraries as you see fit.
+2. Insert calls to evaluate the energy-delay^2 goal metric (in
+   Joules-seconds^2)  for the core computation in the pure Python
+   implementation (ignoring initialization, data input, and data output).
+3. Use a standard Python profiler to identify the performance-critical code regions of the Python implementation.
+3. Select a  performance-critical code region in the Python code that is a promising
+   candidate to convert to Intrepydd code.  (The region should 
+uses Python features and libraries that are supported by Intrepydd.)
+4. Move the performance-critical function to a new function in a single
+Intrepydd file for the workflow (.pydd
 extension).
-5. Add type declarations for function parameters and return values;
+5. Add type declarations for function parameters and return values to
+   the new Intrepydd  function;
    in some cases, additional type declarations may be needed for some
-   of the internal statements in the functions.
-6. Compile the .pydd file with the "pyddc -O0" option to automatically
-   generate unoptimized
-   (Python) code for debugging purposes (since it can be debugged
-   using standard Python debugging tools), and record its performance
-   using our _goal metric_ in abstract units for the energy-delay^2
-   product.
-7. Once you confirm that the -O0 version runs correctly, use the
-   "pyddc -O1" option to automatically generate a more optimized version of the code
-   (using Python's Numba JIT compiler), and record its performance.
-8.  Next, use the
-   "pyddc -O2" option to automatically generate a more optimized version of the code
-   (through generation of C/C++ code), and record its performance.
-9.  Finally, search for opportunities to replace some of the Intrepydd
-    code in the .pydd file with calls to stand ard libraries supported
-    in the Intrepydd v0.2 release.  Some of these libraries arfe
-    supported across -O0, -O1, and -O2 options, and some are only
-    supported with the -O2 option.  Direct debugging of code containing calls
-    to libraries that are only supported with the -O2 option is
-    currently not supported, though use of such libraries cna provide
-    significant performance boosts.
-10. Repeat steps 3-10 for additional performance-critical code regions.
+   of the internal assignment statements in the function.
+6. Compile the .pydd file with the "pyddc -O2" option (default
+   optimization level) to automatically 
+   generate optimized C/C++ code from the .pydd file.
+7. Execute the new Python main program with calls to the optimized
+   Intrepydd code, and record its new energy-delay^2 goal metric (in
+   Joules-seconds^2).
+8. For completeness, measure and record the goal metric for
+   optimization levels -O0 and -O1.  Optimization level -O0 can be
+   used for debugging in a standard Python environment.  
+9. Repeat steps 3-8 for additional performance-critical code regions.
