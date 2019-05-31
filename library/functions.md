@@ -1,4 +1,4 @@
-Built-in Functions
+# Built-in Functions
 The built-in functions are listed here in alphabetical order.
 
 **abs(x)**
@@ -15,7 +15,7 @@ The built-in functions are listed here in alphabetical order.
       return True
   ```
   
-  **any**(iterable)
+**any**(iterable)
 - Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to:
 
   ```python
@@ -25,3 +25,5 @@ The built-in functions are listed here in alphabetical order.
               return True
       return False
   ```
+**len**(s)
+- Return the length (the number of items) of an object. The argument may be a sequence (such as a string, bytes, tuple, list, or range) or a collection (such as a dictionary, set, or frozen set).
