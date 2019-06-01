@@ -17,5 +17,6 @@ May 2019, and will be updated as later releases become available.
 **Contents**
 
 - [Language Guide](./language)
-- [Getting Started (for Python Programmers)](./getting-started)
+- [Built-in functions and libraries](ibrary/functions.md)
 - [Tutorial (Jupyter-based)](./tutorial)
+- [Getting Started with Intrepydd (for Python Programmers)](./getting-started)
