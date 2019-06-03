@@ -28,41 +28,40 @@ Jupyter-based tutorials and the Getting Started page with details on system setu
 
 Intrepydd v0.2 requires that _each Intrepydd function parameter and
 return value be declared with one of the following data types:_
-1. _Primitive types:_ int32, int64, float32, float64.  These are fixed-precision numeric types.  Intrepydd v0.2 does not support Python’s multi-precision integers.
-2. _Dense arrays of primitive types_, which correspond to NumPy
-  arrays:  A NumPy array can be allocated in
+1. _Primitive types:_ int32, int64, float32, float64.  These are
+   fixed-precision numeric types.  Intrepydd v0.2 does not support
+   Python’s multi-precision integers.  Primitive types can be passed
+   to an Intrepydd function from a Python program, and also returned
+   to a Python program from an Intrepydd function.
+2. _Dense arrays of primitive types_, which correspond to [NumPy arrays](https://www.numpy.org/devdocs/user/basics.creation.html).  A NumPy array can be allocated in
   the Python main program and passed to an Intrepydd function without
-  copying array data; it can also be allocated in Intrepydd code and
+  copying array data.  It can also be allocated in Intrepydd code and
   returned to the Python main program without
   copying array data.
 3. _Lists of primitive types:_  While lists in Intrepydd v0.2 bear
      some similarity to Python lists, there are many important
      differences.  Intrepydd v0.2 lists are homogeneous, i.e., all elements must
-	 have same primitive data type.
-
-
-Cases 1. and 2. above NumPy represent Intrepydd data types that can be used in function
-parameters and return values within an Intrepydd file and also across
-the Python main program.
-Case 3 represents local Intrepydd lists which can only be allocated and used
+	 have same primitive data type.  Also, local Intrepydd lists which can only be allocated and used
 in Intrepydd code, and cannot
-interoperate with Python lists.  (Note that Intrepydd v0.2 does not
-support dictionaries.)
+interoperate (as paratmenters or return values) with Python lists
 
-Variable data types are inferred automatically from parameters and
-return values, but in some cases
-explicit type declarations may be needed on assignment statements by
+
+The tehee Intrepydd data types above are inferred automatically for
+local variables and expressions, baseds on the type declarations
+provided for parameters and
+return values   In some cases,
+explicit type declarations may be needed for assignment statements by
 using Python's PEP 484 type annotation with the “# type: …” syntax.
 Support for other type annotations, e.g., PEP 526, is deferred to
 future versions of Intrepydd
 	 
 
-There is a fourth case of data types used in Intrepydd to enable 
+There is a fourth case of data types that can be  used in Intrepydd code to enable 
 support for sparse matrix computations via wrappers for _scipy.sparse_
 library calls:
 4. Sparse arrays of primitive types, which correspond to 
   arrays.
-However, these sparse arrays cannot currently be passed to, or from, Intrepydd
+However, like Intrepydd lists, these sparse arrays cannot currently be passed to, or from, Intrepydd
   code or to Python code
 
 
