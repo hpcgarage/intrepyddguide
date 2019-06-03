@@ -92,7 +92,9 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
   - Note: the first argument can be either an array or a scalar
 - [sub](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)
   - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
-
+- [@](https://docs.scipy.org/doc/numpy/reference/generated/numpy.matmul.html)
+  - Syntax sugar for matrix matrix multiplication
+  - Equivalent function is `matmult`
 
 ### Subset of SciPy.sparse libraries
 
