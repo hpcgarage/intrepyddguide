@@ -11,15 +11,7 @@ invokes Intrepydd functions.
 Intrepydd supports the following subset of [Python built-in functions](https://docs.python.org/3/library/functions.html#built-in-functions):
 - [abs](https://docs.python.org/3/library/functions.html#abs)
 - [all](https://docs.python.org/3/library/functions.html#all)
-- [any](https://docs.python.org/3/library/functions.html#any)
-- [float32](https://docs.python.org/3/library/functions.html#float)
-  - Note: Only conversion between numeric numbers are supported
-- [float64](https://docs.python.org/3/library/functions.html#float)
-  - Note: Only conversion between numeric numbers are supported  
-- [int32](https://docs.python.org/3/library/functions.html#int)
-  - Note: Only conversion between numeric numbers are supported
-- [int64](https://docs.python.org/3/library/functions.html#int)
-  - Note: Only conversion between numeric numbers are supported    
+- [any](https://docs.python.org/3/library/functions.html#any)  
 - [len](https://docs.python.org/3/library/functions.html#len)
 - [max](https://docs.python.org/3/library/functions.html#max)
 - [min](https://docs.python.org/3/library/functions.html#min)
@@ -49,9 +41,17 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
   - Example: `empty([2,3], int32())`
 - [eq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array_equal.html)
 - [exp](https://docs.scipy.org/doc/numpy/reference/generated/numpy.exp.html)
+- [float32](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
+  - Convert a number to float32 type
+- [float64](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
+  - Convert a number to float64 type
 - [ge](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater_equal.html)
 - [gt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater.html)
-- [innerprod](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ma.innerproduct.html)
+- [innerprod](https://docs.s()https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.htmlcipy.org/doc/numpy/reference/generated/numpy.ma.innerproduct.html)
+- [int32](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
+  - Note: Convert a number to int32 type
+- [int64](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
+  - Note: Convert a number to int64 type
 - [isinf](https://docs.scipy.org/doc/numpy/reference/generated/numpy.isinf.html)
 - [isnan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.isnan.html)
 - [lt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less.html)
