@@ -27,4 +27,4 @@ extension).
 8. Execute the new Python main program with calls to the optimized
    Intrepydd code, and record its new Energy-Delay-Squared goal metric (in
    Joules-Seconds^2).
-9. Repeat steps 3-8 for additional performance-critical code regions.
+9. Repeat steps 2-8 for additional performance-critical code regions.
