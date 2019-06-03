@@ -108,11 +108,11 @@ the compiler.
 
 Intrepydd v0.2 supports the following operators, which can be used to
 create expressions:
-- Unary operators.
-- Binary operators.
+- [Unary operators](https://docs.python.org/3/reference/expressions.html#unary-arithmetic-and-bitwise-operations).
+- [Binary operators](https://docs.python.org/3/reference/expressions.html#binary-arithmetic-operations).
 - Array element operator, _A[i0, i1, ...]_, can be used to access an
    element of a NumPy array, _A_, both as an lval and as an rval.
-- List constructors, e.g., [1, 2, 3].
+- [List](https://docs.python.org/3/tutorial/introduction.html?highlight=lists#lists) constructors, e.g., [1, 2, 3].
 
 <!---
 ### Optimization levels
