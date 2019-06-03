@@ -113,7 +113,10 @@ and spm2 a dense matrix.
   spm2 as a sparse matrix.
 - spm_mul(spm1, spm2) returns the element-wise product of sparse matrices spm1 and
   spm2 as a sparse matrix.
-- spm_set_item_unsafe(spm, v, r, c) sets item [r,c] pf sparse matrix spm to v
+- spm_set_item(spm, v, r, c) sets item [r,c] pf sparse matrix spm to v.
+- spm_set_item_unsafe(spm, v, r, c) assigns item [r,c] pf sparse
+  matrix spm to v, and assumes without checking that item [r,c]
+  already had a nonzero entry in spm.
 - spm_to_csr(spm, arr_values,
 		 arr_columns, arr_indexes) takes sparse matrix spm as input,
 		 and fills in three 1-D arrays --- arr_values,
