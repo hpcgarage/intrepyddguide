@@ -12,6 +12,14 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [abs](https://docs.python.org/3/library/functions.html#abs)
 - [all](https://docs.python.org/3/library/functions.html#all)
 - [any](https://docs.python.org/3/library/functions.html#any)
+- [float32](https://docs.python.org/3/library/functions.html#float)
+  - Note: Only conversion between numeric numbers are supported
+- [float64](https://docs.python.org/3/library/functions.html#float)
+  - Note: Only conversion between numeric numbers are supported  
+- [int32](https://docs.python.org/3/library/functions.html#int)
+  - Note: Only conversion between numeric numbers are supported
+- [int64](https://docs.python.org/3/library/functions.html#int)
+  - Note: Only conversion between numeric numbers are supported    
 - [len](https://docs.python.org/3/library/functions.html#len)
 - [max](https://docs.python.org/3/library/functions.html#max)
 - [min](https://docs.python.org/3/library/functions.html#min)
@@ -26,11 +34,29 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 
 - [minus](https://docs.scipy.org/doc/numpy/reference/generated/numpy.negative.html)
 - [mul](https://docs.scipy.org/doc/numpy/reference/generated/numpy.multiply.html)
+- [acos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccos.html)
+- [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
+- [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
+- [argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)
+- [argmin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
+- [arraysub](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)
+- [asin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arcsin.html)
+- [atan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arctan.html)
+- [cos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html)
+- [div](https://docs.scipy.org/doc/numpy/reference/generated/numpy.divide.html)
+- [elemwise_not](https://docs.scipy.org/doc/numpy/reference/generated/numpy.logical_not.html)
+- [empty](https://docs.scipy.org/doc/numpy/reference/generated/numpy.empty.html)
+  - Note: argument `order` is not supported. `dtype` is supported in another way.
+  - Example: `empty([2,3], int32())`
+- [eq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array_equal.html)
+- [exp](https://docs.scipy.org/doc/numpy/reference/generated/numpy.exp.html)
+- [ge](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater_equal.html)
+- [gt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater.html)
+
 
 acos, add, allclose, argmax, argmin, arraysub, asin, atan, cos, div,
-elemwise_not, empty, eq, exp, float32, float64, ge, gt, innerprod,
-int32, int64, isinf, isnan, le, log, lt, isinf, isnan, le, len, tan, transpose, zeros,
-log, lt, neq, prod, shape, sin, sqrt, sub,
+elemwise_not, empty, eq, exp, ge, gt, innerprod, isinf, isnan, le, log, lt, isinf, isnan, le, len, tan, transpose, zeros,
+log, neq, prod, shape, sin, sqrt, sub,
 
 ### Subset of SciPy.sparse libraries
 
