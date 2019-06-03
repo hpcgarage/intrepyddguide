@@ -1,4 +1,4 @@
-# Intrepydd's built-in functions and libraries:
+# Intrepydd's built-in functions and libraries
 
 Intrepydd v0.2 supports the following classes of multiple built-in functions  and library
 wrappers for
@@ -18,19 +18,19 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [pow](https://docs.python.org/3/library/functions.html#pow)
   - Note: the last argument `z` is not supported
 - [print](https://docs.python.org/3/library/functions.html#print)
-  - Note: only the first argument is supported and only printing primitive type is supported
+  - Note: only the first argument is supported, and only printing
+    primitive type is supported.  General calls to print can be
+    performed in the Python main program that invokes the Intrepydd code.
 - [range](https://docs.python.org/3/library/functions.html#func-range)
 - [sum](https://docs.python.org/3/library/functions.html#sum)
 
 ### Subset of NumPy libraries
 
-- [minus](https://docs.scipy.org/doc/numpy/reference/generated/numpy.negative.html)
-- [mul](https://docs.scipy.org/doc/numpy/reference/generated/numpy.multiply.html)
-  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
+Intrepydd supports the following subset of NumPy libraries:
 - [acos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccos.html)
   - Note: the first argument can be either an array or a scalar
 - [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
-  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
+  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
 - [argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)
 - [argmin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
@@ -41,13 +41,13 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [cos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html)
   - Note: the first argument can be either an array or a scalar
 - [div](https://docs.scipy.org/doc/numpy/reference/generated/numpy.divide.html)
-  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
+  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [elemwise_not](https://docs.scipy.org/doc/numpy/reference/generated/numpy.logical_not.html)
 - [empty](https://docs.scipy.org/doc/numpy/reference/generated/numpy.empty.html)
   - Note: argument `order` is not supported. `dtype` is supported in another way.
   - Example: `empty([2,3], int32())`
 - [eq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array_equal.html)
-  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
+  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [exp](https://docs.scipy.org/doc/numpy/reference/generated/numpy.exp.html)
   - Note: the first argument can be either an array or a scalar
 - [float32](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
@@ -55,9 +55,9 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [float64](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
   - Convert a number to float64 type
 - [ge](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater_equal.html)
-  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
+  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [gt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater.html)
-  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
+  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [innerprod](https://docs.s()https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.htmlcipy.org/doc/numpy/reference/generated/numpy.ma.innerproduct.html)
 - [int32](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
   - Note: Convert a number to int32 type
@@ -67,22 +67,23 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
   - Note: the first argument can be either an array or a scalar
 - [isnan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.isnan.html)
   - Note: the first argument can be either an array or a scalar
-- [lt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less.html)
-  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
 - [le](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less_equal.html)
-  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
+  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [log](https://docs.scipy.org/doc/numpy/reference/generated/numpy.log.html)
   - Note: the first argument can be either an array or a scalar
-  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
-- [tan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.tan.html)
-  - Note: the first argument can be either an array or a scalar
-- [transpose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html)
-- [zeros](https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html)
+  - Broadcasting is only supported if the first argument is an array
+  and the second argument is a scalar
+- [lt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less.html)
+  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
+- [minus](https://docs.scipy.org/doc/numpy/reference/generated/numpy.negative.html)
+- [mul](https://docs.scipy.org/doc/numpy/reference/generated/numpy.multiply.html)
+  - Broadcasting is only supported if the first argument is an array
+  and the second argument is a scalar
 - [neq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.not_equal.html)
-  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
+  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [pow](https://docs.scipy.org/doc/numpy/reference/generated/numpy.pow.html)
   - The first argument can be either an array or a scalar
-  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
+  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [prod](https://docs.scipy.org/doc/numpy/reference/generated/numpy.prod.html)
 - [shape](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html)
   - Note: is a function rather than an attribute. Example: `shape(arr, index)`
@@ -91,24 +92,24 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [sqrt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html)
   - Note: the first argument can be either an array or a scalar
 - [sub](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)
-  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
+  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
+- [tan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.tan.html)
+  - Note: the first argument can be either an array or a scalar
+- [transpose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html)
+- [zeros](https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html)
 - [@](https://docs.scipy.org/doc/numpy/reference/generated/numpy.matmul.html)
   - Syntax sugar for matrix matrix multiplication
   - Equivalent function is `matmult`
 
-### Subset of SciPy.sparse libraries
+### Subset of CombBLAS libraries
 
 - empty_spm
-- csr_to_spm
-- spm_to_csr
-- spm_set_item_unsafe
-- spm_mul
 - spmm
+- spmm_dense 
+- spm_mul
+- spm_set_item_unsafe 
+- spm_to_csr
 - spmv
-- spmm_dense
-
-
-TO BE COMPLETED
 
 <!---
 ### API Wrappers 
