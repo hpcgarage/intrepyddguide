@@ -39,7 +39,6 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
 - [argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)
 - [argmin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
-- [arraysub](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)
 - [asin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arcsin.html)
 - [atan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arctan.html)
 - [cos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html)
@@ -52,11 +51,24 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [exp](https://docs.scipy.org/doc/numpy/reference/generated/numpy.exp.html)
 - [ge](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater_equal.html)
 - [gt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater.html)
-
-
+- [innerprod](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ma.innerproduct.html)
+- [isinf](https://docs.scipy.org/doc/numpy/reference/generated/numpy.isinf.html)
+- [isnan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.isnan.html)
+- [lt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less.html)
+- [le](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less_equal.html)
+- [log](https://docs.scipy.org/doc/numpy/reference/generated/numpy.log.html)
+- [tan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.tan.html)
+- [transpose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html)
+- [zeros](https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html)
+- [neq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.not_equal.html)
+- [prod](https://docs.scipy.org/doc/numpy/reference/generated/numpy.prod.html)
+- [shape](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html)
+  - Note: is a function rather than an attribute. Example: `shape(arr, index)`
+- [sin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sin.html)
+- [sqrt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html)
+- [sub](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)
 acos, add, allclose, argmax, argmin, arraysub, asin, atan, cos, div,
-elemwise_not, empty, eq, exp, ge, gt, innerprod, isinf, isnan, le, log, lt, isinf, isnan, le, len, tan, transpose, zeros,
-log, neq, prod, shape, sin, sqrt, sub,
+elemwise_not, empty, eq, exp, ge, gt, innerprod, isinf, isnan, le, log, lt, tan, transpose, zeros, neq, prod, shape, sin, sqrt, sub,
 
 ### Subset of SciPy.sparse libraries
 
