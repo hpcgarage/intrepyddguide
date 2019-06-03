@@ -93,7 +93,7 @@ eligible for parallelization can be converted to parallel loops in
 Intrepydd by replacing "for" by "pfor".  The main conditions for a
 loop to be eligible for parallelization are:
 1. The loop should have no cross-iteration dependences on array variables.  For example,
-if "2*A[i]" in the above loop  is replaced by "2*A[i-1]", the loop
+if 2*A[i] in the above loop  is replaced by 2*A[i-1], the loop
 will no longer be eligible for parallelization since there can be a
 race condition between (say) the write of A[0] in iteration i=0 and 
 the read of A[0] in iteration i=1.  It is the user's responsibility to
