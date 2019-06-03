@@ -15,9 +15,6 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [len](https://docs.python.org/3/library/functions.html#len)
 - [max](https://docs.python.org/3/library/functions.html#max)
 - [min](https://docs.python.org/3/library/functions.html#min)
-- [minus](https://docs.python.org/3/library/functions.html#minus)
-- [mul](https://docs.python.org/3/library/functions.html#mul)
-- [multiply](https://docs.python.org/3/library/functions.html#multiply)
 - [pow](https://docs.python.org/3/library/functions.html#pow)
   - Note: the last argument `z` is not supported
 - [print](https://docs.python.org/3/library/functions.html#print)
@@ -26,6 +23,9 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [sum](https://docs.python.org/3/library/functions.html#sum)
 
 ### Subset of NumPy libraries
+
+- [minus](https://docs.scipy.org/doc/numpy/reference/generated/numpy.negative.html)
+- [mul](https://docs.scipy.org/doc/numpy/reference/generated/numpy.multiply.html)
 
 acos, add, allclose, argmax, argmin, arraysub, asin, atan, cos, div,
 elemwise_not, empty, eq, exp, float32, float64, ge, gt, innerprod,
