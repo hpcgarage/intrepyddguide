@@ -22,7 +22,7 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
   - Note: the last argument `z` is not supported
 - [print](https://docs.python.org/3/library/functions.html#print)
   - Note: Only the first argument is supported and only printing primitive type is supported
-- [range](https://docs.python.org/3/library/functions.html#range)
+- [range](https://docs.python.org/3/library/functions.html#func-range)
 - [sum](https://docs.python.org/3/library/functions.html#sum)
 
 ### Subset of NumPy libraries
