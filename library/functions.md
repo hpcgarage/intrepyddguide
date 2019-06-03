@@ -47,6 +47,7 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
   - Note: argument `order` is not supported. `dtype` is supported in another way.
   - Example: `empty([2,3], int32())`
 - [eq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array_equal.html)
+  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
 - [exp](https://docs.scipy.org/doc/numpy/reference/generated/numpy.exp.html)
   - Note: the first argument can be either an array or a scalar
 - [float32](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
@@ -54,7 +55,9 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [float64](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
   - Convert a number to float64 type
 - [ge](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater_equal.html)
+  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
 - [gt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater.html)
+  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
 - [innerprod](https://docs.s()https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.htmlcipy.org/doc/numpy/reference/generated/numpy.ma.innerproduct.html)
 - [int32](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
   - Note: Convert a number to int32 type
@@ -65,7 +68,9 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [isnan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.isnan.html)
   - Note: the first argument can be either an array or a scalar
 - [lt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less.html)
+  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
 - [le](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less_equal.html)
+  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
 - [log](https://docs.scipy.org/doc/numpy/reference/generated/numpy.log.html)
   - Note: the first argument can be either an array or a scalar
   - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
@@ -74,6 +79,7 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [transpose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html)
 - [zeros](https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html)
 - [neq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.not_equal.html)
+  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
 - [pow](https://docs.scipy.org/doc/numpy/reference/generated/numpy.pow.html)
   - The first argument can be either an array or a scalar
   - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
