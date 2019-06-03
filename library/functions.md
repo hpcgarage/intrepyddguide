@@ -105,16 +105,22 @@ Intrepydd supports the following subset of NumPy libraries:
 
 Intrepydd supports the following subset of CombBLAS libraries:
 - empty_spm(nr, nc) returns an empty sparse matrix with nr rows and nc columns.
-- spmm(spm1, spm2) returns the product of sparse matrices spm1 and
-  spm2 as a sparse matrix
-- spmm_dense(spm1, spm2) returns the product of sparse matrices spm1
-  and spm2 a dense matrix
-- spm_mul
+- spmm(spm1, spm2) returns the matrix product of sparse matrices spm1 and
+  spm2 as a sparse matrix.
+- spmm_dense(spm1, spm2) returns the matrix product of sparse matrices spm1
+and spm2 a dense matrix.
+- spm_add(spm1, spm2) returns the element-wise sum of sparse matrices spm1 and
+  spm2 as a sparse matrix.
+- spm_mul(spm1, spm2) returns the element-wise product of sparse matrices spm1 and
+  spm2 as a sparse matrix.
 - spm_set_item_unsafe(spm, v, r, c) sets item [r,c] pf sparse matrix spm to v
 - spm_to_csr(spm, arr_values,
-		 arr_columns, arr_indexes)
-- spmv(spm, arr) returns the product of sparse matrix spm and vector
-  arr as a new vector
+		 arr_columns, arr_indexes) takes sparse matrix spm as input,
+		 and fills in three 1-D arrays --- arr_values,
+		 arr_columns, arr_indexes --- with the values corresponding to
+		 a CSR representation of spm.
+- spmv(spm, arr) returns the product of sparse matrix spm and dense vector
+  arr as a new dense vector.
 
 <!---
 ### API Wrappers 
