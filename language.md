@@ -15,11 +15,11 @@ that invokes Intrepydd kernels.
 
 This page summarizes the language features  available in
 Intrepydd v0.2, which only runs on
-multicore CPU processors, but later versions of Intrepydd under
-development already support execution on GPUs and simulators for future
+multicore CPU processors; later versions of Intrepydd under
+development support execution on GPUs and simulators for future
 hardware.
 
-See the links at the bottom of the [Intrepydd README page](README) for
+See the links at the bottom of the [Intrepydd README page](README.md) for
 additional information, including built-in functions and libraries,
 Jupyter-based tutorials and the Getting Started page with details on system setup for programming in Intrepydd.
 
