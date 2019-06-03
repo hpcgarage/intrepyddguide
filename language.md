@@ -61,21 +61,21 @@ support for sparse matrix computations via wrappers for a subset of [scipy.spars
 library calls:
 - Sparse arrays of primitive types, which correspond to 
   arrays.
-However, values with this type can only be used as parameters and
-  return values in _scipy.sparse_.  Like Intrepydd lists, these sparse arrays cannot currently be passed to, or from, Intrepydd
-  code or to Python code.
-
-
+Values of this type can only be used as parameters and
+  return values in a subset of _scipy.sparse_ API calls in Intrepydd code.  Like Intrepydd lists, these sparse arrays cannot currently be passed to, or from, Intrepydd
+  code or to Python code.  For convenience, we support a virtual
+  method call syntax of the form a.foo() for calls to _scipy.sparse_ APIs, 
+but general objects and method calls are not supported for other data
+  types in Intrepydd v0.2.
 
 ### Statements
 
 Intrepydd v0.2 supports the following standard statement types from Python:
 - [Assignment statements](https://docs.python.org/2.0/ref/assignment.html).
-- Return statements.
-- Sequential for and while loops with break / continue statements.
-- Conditional if / elif / else statements.
-- Calls to user-defined and built-in
-Intrepydd functions.  Note that objects and method calls are not supported in Intrepydd v0.2.
+- [Return statements](https://docs.python.org/2.0/ref/return.html).
+- Sequential [for](https://docs.python.org/3/tutorial/controlflow.html#for-statements) and [while](https://docs.python.org/3/reference/compound_stmts.html#while) loops with [break](https://docs.python.org/3/reference/simple_stmts.html?highlight=break#grammar-token-break-stmt) / [continue](https://docs.python.org/3/reference/simple_stmts.html?highlight=break#the-continue-statement) statements.
+- Conditional [if / elif / else](https://docs.python.org/3/reference/compound_stmts.html?highlight=elif#if) statements.
+- Calls to user-defined and [built-in](library/functions.md) Intrepydd functions. 
 
 In addition, Intrepydd v0.2 supports a _parallel for_ (_pfor_) loop
 statement, which is not available in Python.
