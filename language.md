@@ -46,30 +46,31 @@ in Intrepydd code, and cannot
 interoperate (as paratmenters or return values) with Python lists
 
 
-The tehee Intrepydd data types above are inferred automatically for
-local variables and expressions, baseds on the type declarations
+The three Intrepydd data types listed above are inferred automatically for
+local variables and expressions, based on the type declarations
 provided for parameters and
-return values   In some cases,
+return values.   In some cases,
 explicit type declarations may be needed for assignment statements by
 using Python's PEP 484 type annotation with the “# type: …” syntax.
 Support for other type annotations, e.g., PEP 526, is deferred to
 future versions of Intrepydd
 	 
 
-There is a fourth case of data types that can be  used in Intrepydd code to enable 
-support for sparse matrix computations via wrappers for _scipy.sparse_
+There is a fourth case data type that can be  used in Intrepydd code to enable 
+support for sparse matrix computations via wrappers for a subset of [scipy.sparse](https://docs.scipy.org/doc/scipy/reference/sparse.html)
 library calls:
-4. Sparse arrays of primitive types, which correspond to 
+- Sparse arrays of primitive types, which correspond to 
   arrays.
-However, like Intrepydd lists, these sparse arrays cannot currently be passed to, or from, Intrepydd
-  code or to Python code
+However, values with this type can only be used as parameters and
+  return values in _scipy.sparse_.  Like Intrepydd lists, these sparse arrays cannot currently be passed to, or from, Intrepydd
+  code or to Python code.
 
 
 
 ### Statements
 
 Intrepydd v0.2 supports the following standard statement types from Python:
-- Assignment statements.
+- [Assignment statements](https://docs.python.org/2.0/ref/assignment.html).
 - Return statements.
 - Sequential for and while loops with break / continue statements.
 - Conditional if / elif / else statements.
