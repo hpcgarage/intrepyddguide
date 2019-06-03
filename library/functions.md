@@ -11,7 +11,7 @@ invokes Intrepydd functions.
 ### Subset of Python built-in functions
 
 Intrepydd supports the following subset of [Python built-in functions](https://docs.python.org/3/library/functions.html#built-in-functions):
-abs, all, any, len, max, min, minus, mul, multiply, pow, print, range, sum.
+[abs](https://docs.python.org/3/library/functions.html#abs), all, any, len, max, min, minus, mul, multiply, pow, print, range, sum.
 
 ### Subset of NumPy libraries
 
