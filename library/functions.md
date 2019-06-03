@@ -27,13 +27,17 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [minus](https://docs.scipy.org/doc/numpy/reference/generated/numpy.negative.html)
 - [mul](https://docs.scipy.org/doc/numpy/reference/generated/numpy.multiply.html)
 - [acos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccos.html)
+  - Note: the first argument can be either an array or a scalar
 - [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
 - [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
 - [argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)
 - [argmin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
 - [asin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arcsin.html)
+  - Note: the first argument can be either an array or a scalar
 - [atan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arctan.html)
+  - Note: the first argument can be either an array or a scalar
 - [cos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html)
+  - Note: the first argument can be either an array or a scalar
 - [div](https://docs.scipy.org/doc/numpy/reference/generated/numpy.divide.html)
 - [elemwise_not](https://docs.scipy.org/doc/numpy/reference/generated/numpy.logical_not.html)
 - [empty](https://docs.scipy.org/doc/numpy/reference/generated/numpy.empty.html)
@@ -41,6 +45,7 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
   - Example: `empty([2,3], int32())`
 - [eq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array_equal.html)
 - [exp](https://docs.scipy.org/doc/numpy/reference/generated/numpy.exp.html)
+  - Note: the first argument can be either an array or a scalar
 - [float32](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
   - Convert a number to float32 type
 - [float64](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
@@ -53,19 +58,27 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [int64](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
   - Note: Convert a number to int64 type
 - [isinf](https://docs.scipy.org/doc/numpy/reference/generated/numpy.isinf.html)
+  - Note: the first argument can be either an array or a scalar
 - [isnan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.isnan.html)
+  - Note: the first argument can be either an array or a scalar
 - [lt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less.html)
 - [le](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less_equal.html)
 - [log](https://docs.scipy.org/doc/numpy/reference/generated/numpy.log.html)
+  - Note: the first argument can be either an array or a scalar
 - [tan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.tan.html)
+  - Note: the first argument can be either an array or a scalar
 - [transpose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html)
 - [zeros](https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html)
 - [neq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.not_equal.html)
+- [pow](https://docs.scipy.org/doc/numpy/reference/generated/numpy.pow.html)
+  - Note: the first argument can be either an array or a scalar
 - [prod](https://docs.scipy.org/doc/numpy/reference/generated/numpy.prod.html)
 - [shape](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html)
   - Note: is a function rather than an attribute. Example: `shape(arr, index)`
 - [sin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sin.html)
+  - Note: the first argument can be either an array or a scalar
 - [sqrt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html)
+  - Note: the first argument can be either an array or a scalar
 - [sub](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)
 
 
