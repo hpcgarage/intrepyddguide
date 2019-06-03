@@ -103,13 +103,18 @@ Intrepydd supports the following subset of NumPy libraries:
 
 ### Subset of CombBLAS libraries
 
-- empty_spm
-- spmm
-- spmm_dense 
+Intrepydd supports the following subset of CombBLAS libraries:
+- empty_spm(nr, nc) returns an empty sparse matrix with nr rows and nc columns.
+- spmm(spm1, spm2) returns the product of sparse matrices spm1 and
+  spm2 as a sparse matrix
+- spmm_dense(spm1, spm2) returns the product of sparse matrices spm1
+  and spm2 a dense matrix
 - spm_mul
-- spm_set_item_unsafe 
-- spm_to_csr
-- spmv
+- spm_set_item_unsafe(spm, v, r, c) sets item [r,c] pf sparse matrix spm to v
+- spm_to_csr(spm, arr_values,
+		 arr_columns, arr_indexes)
+- spmv(spm, arr) returns the product of sparse matrix spm and vector
+  arr as a new vector
 
 <!---
 ### API Wrappers 
