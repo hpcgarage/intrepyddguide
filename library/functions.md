@@ -71,6 +71,14 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 
 ### Subset of SciPy.sparse libraries
 
+- [empty_spm]
+- [csr_to_spm]
+- [spm_to_csr]
+- [spm_set_item_unsafe]
+- [spm_mul]
+- [spmm]
+- [spmv]
+- [spmm_dense]
 
 
 TO BE COMPLETED
