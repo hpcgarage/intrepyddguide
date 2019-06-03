@@ -1,21 +1,26 @@
-# Intrepydd's built-in functions and libraries:#
+# Intrepydd's built-in functions and libraries:
 
 
-### Built-in functions
 
-Intrepydd v0.2 supports multiple built-in functions  and library
+Intrepydd v0.2 supports the following classes of multiple built-in functions  and library
 wrappers for
-the convenience of the programmer
+the convenience of the programmer.  Recall that all standard Python
+functions and libraries can be used in the Python main program that
+invokes Intrepydd functions.
 
-<---
-:  abs, acos, add, all, allclose, any, argmax, argmin, arraysub, asin, atan, cos, div, elemwise_not, empty, eq, exp, float32, float64, ge, gt, innerprod, int32, int64, isinf, isnan, le, len, log, lt, max, min, minus, mul, multiply, neq, pow, print, prod, range, shape, sin, sqrt, sub, sum, tan, transpose, zeros.
+### Subset of Python built-in functions
 
-Some of these built-in functions serve as wrappers for
-standard native libraries.  All functions are supported at the -O2
-optimization level, but not all
-built-in functions are supported at the -O0 and -O1 levels.
--->
+Intrepydd supports the following subset of [Python built-in functions](https://docs.python.org/3/library/functions.html#built-in-functions):
+abs, all, any, len, max, min, minus, mul, multiply, pow, print, range, sum.
 
+### Subset of NumPy libraries
+
+acos, add, allclose, argmax, argmin, arraysub, asin, atan, cos, div,
+elemwise_not, empty, eq, exp, float32, float64, ge, gt, innerprod,
+int32, int64, isinf, isnan, le, log, lt, isinf, isnan, le, len, , tan, transpose, zeros.
+log, lt, neq, prod, shape, sin, sqrt, sub, 
+
+<!---
 ### API Wrappers 
 The built-in functions are listed here in alphabetical order.
 
@@ -51,4 +56,4 @@ The built-in functions are listed here in alphabetical order.
 
 - The arguments must have numeric types. With mixed operand types, the coercion rules for binary arithmetic operators apply. For int operands, the result has the same type as the operands (after coercion) unless the second argument is negative; in that case, all arguments are converted to float and a float result is delivered. For example, `10**2` returns 100, but `10**-2` returns 0.01. 
 
-
+--->
