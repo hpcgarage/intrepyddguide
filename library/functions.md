@@ -18,7 +18,11 @@ abs, all, any, len, max, min, minus, mul, multiply, pow, print, range, sum.
 acos, add, allclose, argmax, argmin, arraysub, asin, atan, cos, div,
 elemwise_not, empty, eq, exp, float32, float64, ge, gt, innerprod,
 int32, int64, isinf, isnan, le, log, lt, isinf, isnan, le, len, , tan, transpose, zeros.
-log, lt, neq, prod, shape, sin, sqrt, sub, 
+log, lt, neq, prod, shape, sin, sqrt, sub,
+
+### Subset of SciPy.sparse libraries
+
+TO BE COMPLETED
 
 <!---
 ### API Wrappers 
