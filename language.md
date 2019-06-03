@@ -78,7 +78,31 @@ Intrepydd v0.2 supports the following standard statement types from Python:
 - Calls to user-defined and [built-in](library/functions.md) Intrepydd functions. 
 
 In addition, Intrepydd v0.2 supports a _parallel for_ (_pfor_) loop
-statement, which is not available in Python.
+statement, which is not available in Python.  A simple example is as
+follows:
+
+```python
+# Double each element of array A
+pfor i in range(A.shape[0]):
+  temp = 2*A[i]
+  A[i] = temp
+  ```
+
+As can be seen from the simple example, sequential for loops that are
+eligible for parallelization can be converted to parallel loops in
+Intrepydd by replacing "for" by "pfor".  The main conditions for a
+loop to be eligible for parallelization are:
+1. The loop should have no cross-iteration dependences on array variables.  For example,
+if "2*A[i]" in the above loop  is replaced by "2*A[i-1]", the loop
+will no longer be eligible for parallelization since there can be a
+race condition between (say) the write of A[0] in iteration i=0 and 
+the read of A[0] in iteration i=1.  It is the user's responsibility to
+check this condition.
+2. The loop should have no read-after-write (flow) cross-iteration
+dependences on scalar variables.  Note that that the above example has no cross-iteration
+dependences on scalar variable, temp, since the value of temp is
+written and read in the same iteration.  This condition will be checked by
+the compiler.
 
 ### Expressions
 
