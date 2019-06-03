@@ -67,10 +67,11 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [sin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sin.html)
 - [sqrt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html)
 - [sub](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)
-acos, add, allclose, argmax, argmin, arraysub, asin, atan, cos, div,
-elemwise_not, empty, eq, exp, ge, gt, innerprod, isinf, isnan, le, log, lt, tan, transpose, zeros, neq, prod, shape, sin, sqrt, sub,
+
 
 ### Subset of SciPy.sparse libraries
+
+
 
 TO BE COMPLETED
 
