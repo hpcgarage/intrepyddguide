@@ -1,23 +1,35 @@
 # Intrepydd's built-in functions and libraries:
 
-
-
 Intrepydd v0.2 supports the following classes of multiple built-in functions  and library
 wrappers for
-the convenience of the programmer.  Recall that all standard Python
+the convenience of the programmer. Recall that all standard Python
 functions and libraries can be used in the Python main program that
 invokes Intrepydd functions.
 
 ### Subset of Python built-in functions
 
 Intrepydd supports the following subset of [Python built-in functions](https://docs.python.org/3/library/functions.html#built-in-functions):
-[abs](https://docs.python.org/3/library/functions.html#abs), all, any, len, max, min, minus, mul, multiply, pow, print, range, sum.
+- [abs](https://docs.python.org/3/library/functions.html#abs)
+- [all](https://docs.python.org/3/library/functions.html#all)
+- [any](https://docs.python.org/3/library/functions.html#any)
+- [len](https://docs.python.org/3/library/functions.html#len)
+- [max](https://docs.python.org/3/library/functions.html#max)
+- [min](https://docs.python.org/3/library/functions.html#min)
+- [minus](https://docs.python.org/3/library/functions.html#minus)
+- [mul](https://docs.python.org/3/library/functions.html#mul)
+- [multiply](https://docs.python.org/3/library/functions.html#multiply)
+- [pow](https://docs.python.org/3/library/functions.html#pow)
+  - Note: the last argument `z` is not supported
+- [print](https://docs.python.org/3/library/functions.html#print)
+  - Note: Only the first argument is supported and only printing primitive type is supported
+- [range](https://docs.python.org/3/library/functions.html#range)
+- [sum](https://docs.python.org/3/library/functions.html#sum)
 
 ### Subset of NumPy libraries
 
 acos, add, allclose, argmax, argmin, arraysub, asin, atan, cos, div,
 elemwise_not, empty, eq, exp, float32, float64, ge, gt, innerprod,
-int32, int64, isinf, isnan, le, log, lt, isinf, isnan, le, len, , tan, transpose, zeros.
+int32, int64, isinf, isnan, le, log, lt, isinf, isnan, le, len, tan, transpose, zeros,
 log, lt, neq, prod, shape, sin, sqrt, sub,
 
 ### Subset of SciPy.sparse libraries
