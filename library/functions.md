@@ -18,7 +18,7 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [pow](https://docs.python.org/3/library/functions.html#pow)
   - Note: the last argument `z` is not supported
 - [print](https://docs.python.org/3/library/functions.html#print)
-  - Note: Only the first argument is supported and only printing primitive type is supported
+  - Note: only the first argument is supported and only printing primitive type is supported
 - [range](https://docs.python.org/3/library/functions.html#func-range)
 - [sum](https://docs.python.org/3/library/functions.html#sum)
 
@@ -26,9 +26,11 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 
 - [minus](https://docs.scipy.org/doc/numpy/reference/generated/numpy.negative.html)
 - [mul](https://docs.scipy.org/doc/numpy/reference/generated/numpy.multiply.html)
+  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
 - [acos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccos.html)
   - Note: the first argument can be either an array or a scalar
 - [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
+  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
 - [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
 - [argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)
 - [argmin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
@@ -39,6 +41,7 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [cos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html)
   - Note: the first argument can be either an array or a scalar
 - [div](https://docs.scipy.org/doc/numpy/reference/generated/numpy.divide.html)
+  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
 - [elemwise_not](https://docs.scipy.org/doc/numpy/reference/generated/numpy.logical_not.html)
 - [empty](https://docs.scipy.org/doc/numpy/reference/generated/numpy.empty.html)
   - Note: argument `order` is not supported. `dtype` is supported in another way.
@@ -65,13 +68,15 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [le](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less_equal.html)
 - [log](https://docs.scipy.org/doc/numpy/reference/generated/numpy.log.html)
   - Note: the first argument can be either an array or a scalar
+  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
 - [tan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.tan.html)
   - Note: the first argument can be either an array or a scalar
 - [transpose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html)
 - [zeros](https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html)
 - [neq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.not_equal.html)
 - [pow](https://docs.scipy.org/doc/numpy/reference/generated/numpy.pow.html)
-  - Note: the first argument can be either an array or a scalar
+  - The first argument can be either an array or a scalar
+  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
 - [prod](https://docs.scipy.org/doc/numpy/reference/generated/numpy.prod.html)
 - [shape](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html)
   - Note: is a function rather than an attribute. Example: `shape(arr, index)`
@@ -80,6 +85,7 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 - [sqrt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html)
   - Note: the first argument can be either an array or a scalar
 - [sub](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)
+  - Broadcasting is only supported if the first argument is an array and the scond argument is a scalar
 
 
 ### Subset of SciPy.sparse libraries
