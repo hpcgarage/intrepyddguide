@@ -1,10 +1,10 @@
 # Welcome to Intrepydd! #
 
+
 Intrepydd is a novel ahead-of-time (AOT) programming system for Python
 programmers who want faster code on current hardware, and also on
 future reconfigurable and heterogeneous systems being designed to
-address the challenges of post-Moore's-Law computing in the DARPA
-Software Defined Hardware (SDH) program.
+address the challenges of post-Moore's-Law computing.
 The target audience for Intrepydd is Python programmers who are
 interested in writing
 _data analytics kernels_ with the productivity of high-level Python
@@ -12,11 +12,14 @@ code and the
 performance of low-level C/C++ code.  This web site summarizes an
 early release (v0.2) of Intrepydd, finalized in
 May 2019, and will be updated as later releases become available.
+Intrepydd is being developed in the DDARING research project with
+contributors from Georgia Tech, UIUC, U.Michigan, and USC.  We welcome feedback from testers of this documentation; your feedback will influence future enhancements to the Intrepydd language, its implementation, and its documentation.
+
 
 
 **Contents**
 
 - [Language Guide](./language)
-- [Built-in functions and libraries](ibrary/functions.md)
+- [Built-in functions and libraries](library/functions.md)
 - [Tutorial (Jupyter-based)](./tutorial)
 - [Getting Started with Intrepydd (for Python Programmers)](./getting-started)
