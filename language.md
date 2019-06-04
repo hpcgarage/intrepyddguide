@@ -57,14 +57,14 @@ future versions of Intrepydd.
 	 
 
 There is a fourth case data type that can be used in Intrepydd code to enable 
-support for sparse matrix computations via wrappers for a subset of [scipy.sparse](https://docs.scipy.org/doc/scipy/reference/sparse.html)
+support for sparse matrix computations via wrappers for a subset of [CombBLAS](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/)
 library calls:
 - Sparse arrays of primitive types, which correspond to 
   arrays.
 Values of this type can only be used as parameters and
-  return values in a subset of _scipy.sparse_ API calls in Intrepydd code.  Like Intrepydd lists, these sparse arrays cannot currently be passed to, or from, Intrepydd
+  return values in a subset of CombBLAS API calls in Intrepydd code.  Like Intrepydd lists, these sparse arrays cannot currently be passed to, or from, Intrepydd
   code or to Python code.  For convenience, we support a virtual
-  method call syntax of the form a.foo() for calls to _scipy.sparse_ APIs, 
+  method call syntax of the form a.foo() for calls to CombBLAS APIs, 
 but general objects and method calls are not supported for other data
   types in Intrepydd v0.2.
 

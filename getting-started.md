@@ -6,7 +6,7 @@ command, along with a standard Python environment.
 The recommended use of the Intrepydd v0.2 release in implementing a
 data analytics workflow is as follows:
 1. Create a pure Python implementation of the workflow, using
-standard libraries such as NumPy, SciPy.sparse, and PyTorch.
+standard libraries such as NumPy, CombBLAS, and PyTorch.
 2. Use a standard Python profiler to identify the performance-critical code regions of the Python implementation.
 3. Select a  performance-critical code region in the Python code that is a promising
    candidate to convert to Intrepydd code.  (The region should 
