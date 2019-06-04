@@ -17,4 +17,5 @@ May 2019, and will be updated as later releases become available.
 - [Language Guide](./language)
 - [Built-in functions and libraries](library/functions.md)
 - [Tutorial (Jupyter-based)](./tutorial)
-- [Getting Started](./getting-started)
+- [Performance Goal Metric](./goal-metric)
+- [Getting Started](./getting-started) 
