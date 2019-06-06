@@ -81,7 +81,7 @@ Intrepydd supports the following subset of NumPy libraries:
   and the second argument is a scalar
 - [neq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.not_equal.html)
   - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
-- [pow](https://docs.scipy.org/doc/numpy/reference/generated/numpy.pow.html)
+- [pow](https://docs.scipy.org/doc/numpy/reference/generated/numpy.power.html)
   - The first argument can be either an array or a scalar
   - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [prod](https://docs.scipy.org/doc/numpy/reference/generated/numpy.prod.html)
