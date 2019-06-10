@@ -13,7 +13,7 @@ early release (v0.2) of Intrepydd, finalized in
 May 2019, and will be updated as later releases become available.
 
 **Video Preview.** For a quick screencast video overview, which goes through the
-  [k-means case study](./notebooks/004-kmeans.ipynb) in the [Jupyter-based tutorial](./tutorial), [click here (YouTube)](https://www.youtube.com/watch?v=00CkXStroOk).
+  k-means case study in the [Jupyter-based tutorial](./tutorial), [click here (YouTube)](https://www.youtube.com/watch?v=00CkXStroOk).
 
 **Contents**
 
