@@ -1,4 +1,4 @@
-# Welcome to Intrepydd! #
+# Welcome to Intrepydd!
 
 Intrepydd is a novel ahead-of-time (AOT) programming system for Python
 programmers who want faster code on current hardware, and also on
@@ -11,6 +11,9 @@ code and the
 performance of low-level C/C++ code.  This web site summarizes an
 early release (v0.2) of Intrepydd, finalized in
 May 2019, and will be updated as later releases become available.
+
+**Video Preview.** For a quick screencast video overview, which goes through the
+  [k-means case study](./notebooks/004-kmeans.ipynb) in the [Jupyter-based tutorial](./tutorial), [click here (YouTube)](https://www.youtube.com/watch?v=00CkXStroOk).
 
 **Contents**
 
