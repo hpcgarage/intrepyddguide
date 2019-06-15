@@ -21,7 +21,7 @@ hardware.
 
 See the links at the bottom of the [Intrepydd README page](README.md) for
 additional information, including built-in functions and libraries,
-Jupyter-based tutorials and the Getting Started page with details on system setup for programming in Intrepydd.
+Jupyter-based tutorials and the Recommended steps in using the Intrepydd v0.2 release.
 
 
 ### Data Types

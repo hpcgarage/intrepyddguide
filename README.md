@@ -21,4 +21,4 @@ May 2019, and will be updated as later releases become available.
 - [Built-in functions and libraries](library/functions.md)
 - [Tutorial (Jupyter-based)](./tutorial)
 - [Performance Goal Metric](./goal-metric)
-- [Getting Started](./getting-started) 
+- [Recommended steps in using the Intrepydd v0.2 release](./getting-started) 

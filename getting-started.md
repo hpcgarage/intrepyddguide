@@ -1,4 +1,4 @@
-# Getting Started
+# Recommended steps in using the Intrepydd v0.2 release
 
 We assume that you have access to an Intrepydd release with the pyddc
 command, along with a standard Python environment.
