@@ -9,11 +9,13 @@ data analytics workflow is as follows:
 standard libraries such as NumPy, CombBLAS, and PyTorch.
 2. Use a standard Python profiler to identify the performance-critical code regions of the Python implementation.
 3. Select a  performance-critical code region in the Python code that is a promising
-   candidate to convert to Intrepydd code.  (The region should 
-   uses Python libraries that are supported by
-   Intrepydd.)
-4. Insert calls to evaluate the Energy-Delay-Squared goal metric (in
-   Joules-Seconds^2)  for the core computation in the pure Python
+   candidate to convert to Intrepydd code.  (If the Python code uses
+   a library that is not supported by
+   Intrepydd, then you will need to implement the functionality of
+   that library yourself, e.g. by using for/pfor loops.)
+4. Insert calls to evaluate the Energy-Delay-Squared
+   [goal metric](./goal-metric), in
+   Joules-Seconds^2,  for the core computation in the pure Python
    implementation (ignoring initialization, data input, and data output).
 5. Move the performance-critical function to a new function in a single
 Intrepydd file for the workflow (.pydd
@@ -27,4 +29,8 @@ extension).
 8. Execute the new Python main program with calls to the optimized
    Intrepydd code, and record its new Energy-Delay-Squared goal metric (in
    Joules-Seconds^2).
-9. Repeat steps 2-8 for additional performance-critical code regions.
+9. Try using pfor loops to reduce the delay term in the goal metric via parallelism,
+   and also fusing/merging loops to reduce the energy term with
+   improved locality, e.g., by replacing multiple passes over an array
+   by a single pass.
+10. Repeat steps 2-9 for additional performance-critical code regions.
