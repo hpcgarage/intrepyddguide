@@ -15,7 +15,7 @@ def sum(x2: Array(float32,2)) -> float64:
 	The array bounds can also be accessed as x2.shape(0) and x2.shape(1).
 	Individual array elements can be accessed as xs[i,j].
     '''	
-	```
+```
 
 ### Array allocation 
 ```python
@@ -44,7 +44,7 @@ def sum(x2: Array(float32,2)) -> float64:
         . . .
     '''
     Iterate through all elements of 2-D array x2
-    '''```
+    '''
 ```python
     for i in range(shape(x2,0)):
         for j in range(shape(x2,1)):
