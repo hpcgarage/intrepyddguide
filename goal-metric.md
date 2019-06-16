@@ -19,26 +19,29 @@ you can use the performance model, you must compile it. The following steps
 must be performed:
 1. cd /intrepydd/perf-model
 2. Set the following enviornment variables:
- '$ export PAPI_INCLUDE=/usr/include/papi.h'
- '$ export PAPI_LIB=/usr/lib/x86_64-linux-gnu/libpapi.so'
- '$ export PFM_LIB=/usr/lib/x86_64-linux-gnu/libpfm.so'
- '$ export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$PAPI_INCLUDE'
- '$ export LD_PRELOAD=$LD_PRELOAD:$PAPI_LIB:$PFM_LIB'
- '$ export PYTHONPATH=$PYTHONPATH:$PWD'
+```
+ $ export PAPI_INCLUDE=/usr/include/papi.h
+ $ export PAPI_LIB=/usr/lib/x86_64-linux-gnu/libpapi.so
+ $ export PFM_LIB=/usr/lib/x86_64-linux-gnu/libpfm.so
+ $ export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$PAPI_INCLUDE
+ $ export LD_PRELOAD=$LD_PRELOAD:$PAPI_LIB:$PFM_LIB
+ $ export PYTHONPATH=$PYTHONPATH:$PWD
+```
 3. Build the performance model using pyddc:
- '/intrepydd/compiler/pyddc perf_api.cpp'
+ ```'/intrepydd/compiler/pyddc perf_api.cpp'```
 
 4. Now run the sample program:
- '$ cd sample'
- '$ ../../compiler/pyddc matopt_kernel.pydd'
- '$ python matopt_pydd_main.py'
-
+```
+ $ cd sample
+ $ ../../compiler/pyddc matopt_kernel.pydd
+ $ python matopt_pydd_main.py
+```
 You should see a output similar to the one below (Numbers may be different):
-
+```
  ESTIMATED ENERGY = 0.396943
  ESTIMATED DELAY = 1.25747
  ENERGY-DELAY-SQUARED METRIC = 0.627656
-
+```
 Once the Performance Model has been built, it can be used any intrepydd program.
 To import the perf model in your main files, you can add an 'import perf_api'
 statement along with other imports. The API calls are described below:
