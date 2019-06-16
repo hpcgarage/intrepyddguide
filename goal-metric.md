@@ -13,6 +13,19 @@ the docker container should be run in single-tenancy mode so as to
 avoid the possibility of other jobs perturbing performance evaluations
 of the Intrepydd code.
 
+There are four APIs that need to be used to obtain goal metrics:
+1. perf_api.init_metric(), is used to initialize the performance
+   metric subsystem, and should be called as close to start of program
+   execution as possible.
+2. perf_api.start_metric(), is used to mark the start of a
+computationally relevant region of Python/Intrepydd code.
+3. perf_api.stop_metric(), is used to mark the end of a
+computationally relevant region of Python/Intrepydd code.
+4. perf_api.init_metric(), is used to finalize the performance
+   metric subsystem, and should be called after the last call to perf_api.stop_metric().
+
+# Building the Perf Model API
+
 The API internally rely on PAPI (The Performance API) and Linux Perf. These
 should already be bundles within the Docker container provided to you. Before
 you can use the performance model, you must compile it. The following steps
@@ -29,7 +42,6 @@ must be performed:
 ```
 3. Build the performance model using pyddc:
  ```'/intrepydd/compiler/pyddc perf_api.cpp'```
-
 4. Now run the sample program:
 ```
  $ cd sample
@@ -46,17 +58,7 @@ Once the Performance Model has been built, it can be used any intrepydd program.
 To import the perf model in your main files, you can add an 'import perf_api'
 statement along with other imports. The API calls are described below:
 
-There are four APIs that need to be used to obtain goal metrics:
-1. perf_api.init_metric(), is used to initialize the performance
-   metric subsystem, and should be called as close to start of program
-   execution as possible.
-2. perf_api.start_metric(), is used to mark the start of a
-computationally relevant region of Python/Intrepydd code.
-3. perf_api.stop_metric(), is used to mark the end of a
-computationally relevant region of Python/Intrepydd code.
-4. perf_api.init_metric(), is used to finalize the performance
-   metric subsystem, and should be called after the last call to perf_api.stop_metric().
-
+# Sample Usage
 The below code snippet demonstrates the API usage in an Intrepydd program:
 
 ```
