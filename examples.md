@@ -84,13 +84,13 @@ def sum_up(x2: Array(float64,2)) -> float64:
     '''
 ```
 ```python
-    def my_func(x1: Array(float64,1), x2: Array(float64,2)):
+def my_func(x1: Array(float64,1), x2: Array(float64,2)):
 
-        y1 = x1 @ x2    # Equivalent to 'y1 = matmult(x1, x2)'
+    y1 = x1 @ x2    # Equivalent to 'y1 = matmult(x1, x2)'
 
-        y1 = x2 @ y1    # Equivalent to 'y1 = matmult(x2, y1)'
+    y1 = x2 @ y1    # Equivalent to 'y1 = matmult(x2, y1)'
 
-        y2 = x2 @ x2.T  # Equivalent to 'y2 = matmult(x2, transpose(x2))'
+    y2 = x2 @ x2.T  # Equivalent to 'y2 = matmult(x2, transpose(x2))'
     '''
     1st line: vector-matrix multiplication to result in vector (1-D array).
     2nd line: matrix-vector multiplication to result in vector (1-D array).
