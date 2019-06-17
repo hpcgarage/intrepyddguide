@@ -104,30 +104,29 @@ Intrepydd supports the following subset of NumPy libraries:
 ### Subset of CombBLAS libraries
 
 Intrepydd supports the following subset of CombBLAS libraries:
-- empty_spm(nr, nc)
-  - returns an empty sparse matrix with nr rows and nc columns.
-- [spmm(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a4683888892943d76bd707bf5e4b11f15)
-  - returns the matrix product of sparse matrices spm1 and
-    spm2 as a sparse matrix.
-- spmm_dense(spm1, spm2)
- -- returns the matrix product of sparse matrices spm1 and spm2 a dense matrix.
-- spm_add(spm1, spm2)
- -- returns the element-wise sum of sparse matrices spm1 and spm2 as a sparse matrix.
+- [empty_spm(nr, nc)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a3fe039448e6e15c8949f066eea204efa)
+  - Constructs and returns an empty sparse matrix with nr rows and nc columns.
+- [spmm(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
+  - Returns the matrix product of sparse matrices spm1 and spm2 as a sparse matrix.
+- [spmm_dense(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
+ -- Returns the matrix product of sparse matrices spm1 and spm2 a dense matrix.
+- [spm_add(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a17148c59f16d4908b17b807a959abcc5)
+ -- Returns the element-wise sum of sparse matrices spm1 and spm2 as a sparse matrix.
 - [spm_mul(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a1fca28136b736b66fea4f09e01b199c5)
-  - returns the element-wise product of sparse matrices spm1 and   spm2 as a sparse matrix.
+  - Returns the element-wise product of sparse matrices spm1 and   spm2 as a sparse matrix.
 - spm_set_item(spm, v, r, c) 
-  - sets item [r,c] pf sparse matrix spm to v.
+  - Sets item [r,c] pf sparse matrix spm to v.
 - spm_set_item_unsafe(spm, v, r, c)
-  - assigns item [r,c] pf sparse   matrix spm to v, and assumes without checking that item [r,c]
+  - Assigns item [r,c] pf sparse   matrix spm to v, and assumes without checking that item [r,c]
     already had a nonzero entry in spm.
 - spm_to_csr(spm, arr_values,
 		 arr_columns, arr_indexes)
- -- takes sparse matrix spm as input,
+  - Takes sparse matrix spm as input,
 		 and fills in three 1-D arrays --- arr_values,
 		 arr_columns, arr_indexes --- with the values corresponding to
 		 a CSR representation of spm.
 - [spmv(spm, arr)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#af6d7c2a1ec21df8ebdd4cff3eb728fc7)
- -- returns the product of sparse matrix spm and dense vector arr as a new dense vector.
+  - Returns the product of sparse matrix spm and dense vector arr as a new dense vector.
 
 <!---
 ### API Wrappers 
