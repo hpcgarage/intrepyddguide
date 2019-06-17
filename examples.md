@@ -9,7 +9,7 @@ def inc(x1: Array(int32,1), val: int32):
     '''
 ```
 ```python	
-def sum_up(x2: Array(float32,2)) -> float64:
+def sum_up(x2: Array(float64,2)) -> float64:
     '''
     Add up all elements in 2-D array `x2` and return their sum.
     The array bounds can also be accessed as x2.shape(0) and x2.shape(1).
@@ -81,6 +81,20 @@ def sum_up(x2: Array(float32,2)) -> float64:
     '''
     Element-wise sub is first applied to multi-dimensional arrays y and z, and then
     the total sum of the sub result is computed (both lines are equivalent).
+    '''
+```
+```python
+    def my_func(x1: Array(float64,1), x2: Array(float64,2)):
+
+        y1 = x1 @ x2    # Equivalent to 'y1 = matmult(x1, x2)'
+
+        y1 = x2 @ y1    # Equivalent to 'y1 = matmult(x2, y1)'
+
+        y2 = x2 @ x2.T  # Equivalent to 'y2 = matmult(x2, transpose(x2))'
+    '''
+    1st line: vector-matrix multiplication to result in vector (1-D array).
+    2nd line: matrix-vector multiplication to result in vector (1-D array).
+    3rd line: matrix-matrix multiplication to result in matrix (2-D array), where 2nd argument is transpose of x2 (i.e., Symmetric Rank-k Update).
     '''
 ```
 
