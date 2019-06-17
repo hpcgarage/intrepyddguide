@@ -115,10 +115,10 @@ def sum_up(x2: Array(float32,2)) -> float64:
     '''
 ```
 ```python
-    s4a = spmm(s1, s2)
+    s4 = spmm(s1, s2)
     '''
     Sparse matrix matrix multiplication with two sparse matrices s1 and s2,
-    and return the result as a sparse matrix s4a (assume s1's # columns == s2's # rows).
+    and return the result as a sparse matrix s4 (assume s1's # columns == s2's # rows).
     '''
 ```
 ```python
