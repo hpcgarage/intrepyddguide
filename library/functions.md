@@ -117,14 +117,11 @@ Intrepydd supports the following subset of CombBLAS libraries:
 - spm_set_item(spm, v, r, c) 
   - Sets item [r,c] pf sparse matrix spm to v.
 - spm_set_item_unsafe(spm, v, r, c)
-  - Assigns item [r,c] pf sparse   matrix spm to v, and assumes without checking that item [r,c]
-    already had a nonzero entry in spm.
-- spm_to_csr(spm, arr_values,
-		 arr_columns, arr_indexes)
-  - Takes sparse matrix spm as input,
-		 and fills in three 1-D arrays --- arr_values,
-		 arr_columns, arr_indexes --- with the values corresponding to
-		 a CSR representation of spm.
+  - Assigns item [r,c] pf sparse matrix spm to v, and assumes without checking that item [r,c]
+    does not have a nonzero entry in spm.
+- spm_to_csr(spm, arr_values, arr_columns, arr_indexes)
+  - Takes sparse matrix spm as input, and fills in three 1-D arrays --- arr_values,
+    arr_columns, arr_indexes --- with the values corresponding to a CSR representation of spm.
 - [spmv(spm, arr)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#af6d7c2a1ec21df8ebdd4cff3eb728fc7)
   - Returns the product of sparse matrix spm and dense vector arr as a new dense vector.
 
