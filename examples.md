@@ -132,13 +132,13 @@ def my_func(x1: Array(float64,1), x2: Array(float64,2)):
     s4 = spmm(s1, s2)
     '''
     Sparse matrix matrix multiplication with two sparse matrices s1 and s2,
-    and return the result as a sparse matrix s4 (assume s1's # columns == s2's # rows).
+    and return the result as a sparse matrix s4 (error if s1's # columns != s2's # rows).
     '''
 ```
 ```python
     x2 = spmm_dense(s1, x)
     '''
     Sparse matrix matrix multiplication with one sparse matrix s1 and dense array s2,
-    and return the result as a dense array x2 (assume s1's # columns == s2's # rows).
+    and return the result as a dense array x2 (error s1's # columns != s2's # rows).
     '''
 ```
