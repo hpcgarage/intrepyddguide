@@ -105,8 +105,9 @@ Intrepydd supports the following subset of NumPy libraries:
 
 Intrepydd supports the following subset of CombBLAS libraries:
 - empty_spm(nr, nc) returns an empty sparse matrix with nr rows and nc columns.
-- spmm(spm1, spm2) returns the matrix product of sparse matrices spm1 and
-  spm2 as a sparse matrix.
+- [spmm(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a4683888892943d76bd707bf5e4b11f15)
+  - returns the matrix product of sparse matrices spm1 and
+    spm2 as a sparse matrix.
 - spmm_dense(spm1, spm2) returns the matrix product of sparse matrices spm1
 and spm2 a dense matrix.
 - spm_add(spm1, spm2) returns the element-wise sum of sparse matrices spm1 and
