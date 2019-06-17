@@ -105,19 +105,20 @@ Intrepydd supports the following subset of NumPy libraries:
 
 Intrepydd supports the following subset of CombBLAS libraries:
 - [empty_spm(nr, nc)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a3fe039448e6e15c8949f066eea204efa)
-  - Constructs and returns an empty sparse matrix with nr rows and nc columns.
+  - Construct and return an empty sparse matrix with nr rows and nc columns.
 - [spmm(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
-  - Returns the matrix product of sparse matrices spm1 and spm2 as a sparse matrix.
+  - Return the matrix product of sparse matrices spm1 and spm2 as a sparse matrix.
 - [spmm_dense(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
-  - Returns the matrix product of sparse matrices spm1 and spm2 a dense matrix.
+  - Return the matrix product of sparse matrices spm1 and spm2 a dense matrix.
 - [spm_add(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a17148c59f16d4908b17b807a959abcc5)
-  - Returns the element-wise sum of sparse matrices spm1 and spm2 as a sparse matrix.
+  - Return the element-wise sum of sparse matrices spm1 and spm2 as a sparse matrix.
 - [spm_mul(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a1fca28136b736b66fea4f09e01b199c5)
-  - Returns the element-wise product of sparse matrices spm1 and   spm2 as a sparse matrix.
+  - Return the element-wise product of sparse matrices spm1 and   spm2 as a sparse matrix.
 - spm_set_item(spm, v, r, c) 
-  - Sets item [r,c] pf sparse matrix spm to v.
+  - Set item [r,c] of sparse matrix spm to v.
+    If item [r,c] already had a nonzero entry in spm, its value is overwritten with v.
 - spm_set_item_unsafe(spm, v, r, c)
-  - Assigns item [r,c] pf sparse matrix spm to v, and assumes without checking that item [r,c]
+  - Set item [r,c] of sparse matrix spm to v, and assumes without checking that item [r,c]
     does not have a nonzero entry in spm.
 - spm_to_csr(spm, arr_values, arr_columns, arr_indexes)
   - Takes sparse matrix spm as input, and fills in three 1-D arrays --- arr_values,
