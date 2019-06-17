@@ -66,11 +66,11 @@ def sum_up(x2: Array(float32,2)) -> float64:
 
 ### Dense array operations and reduction
 ```python
-    y = sqrt(abs(x2))
+    y = sqrt(abs(x))
 
-    z = x2.abs().sqrt()
+    z = x.abs().sqrt()
     '''
-    Element-wise abs is first applied to multi-dimensional array x2, and then
+    Element-wise abs is first applied to multi-dimensional array x, and then
     element-wise sqrt is applied to the abs result (both computations are equivalent).
     '''
 ```
