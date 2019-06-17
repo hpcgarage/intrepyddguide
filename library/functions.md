@@ -32,7 +32,7 @@ Intrepydd supports the following subset of NumPy libraries:
 - [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
  <!---
    - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
-  --->
+  -->
 - [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
 - [argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)
 - [argmin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
