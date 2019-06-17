@@ -30,9 +30,6 @@ Intrepydd supports the following subset of NumPy libraries:
 - [acos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccos.html)
   - Note: the first argument can be either an array or a scalar
 - [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
-<!---
-   - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
---->
 - [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
 - [argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)
 - [argmin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
@@ -43,13 +40,11 @@ Intrepydd supports the following subset of NumPy libraries:
 - [cos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html)
   - Note: the first argument can be either an array or a scalar
 - [div](https://docs.scipy.org/doc/numpy/reference/generated/numpy.divide.html)
-  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [elemwise_not](https://docs.scipy.org/doc/numpy/reference/generated/numpy.logical_not.html)
 - [empty](https://docs.scipy.org/doc/numpy/reference/generated/numpy.empty.html)
   - Note: argument `order` is not supported. `dtype` is supported in another way.
   - Example: `empty([2,3], int32())`
 - [eq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array_equal.html)
-  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [exp](https://docs.scipy.org/doc/numpy/reference/generated/numpy.exp.html)
   - Note: the first argument can be either an array or a scalar
 - [float32](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
@@ -57,9 +52,7 @@ Intrepydd supports the following subset of NumPy libraries:
 - [float64](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
   - Convert a number to float64 type
 - [ge](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater_equal.html)
-  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [gt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater.html)
-  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [innerprod](https://docs.s()https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.htmlcipy.org/doc/numpy/reference/generated/numpy.ma.innerproduct.html)
 - [int32](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
   - Note: Convert a number to int32 type
@@ -70,22 +63,14 @@ Intrepydd supports the following subset of NumPy libraries:
 - [isnan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.isnan.html)
   - Note: the first argument can be either an array or a scalar
 - [le](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less_equal.html)
-  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [log](https://docs.scipy.org/doc/numpy/reference/generated/numpy.log.html)
   - Note: the first argument can be either an array or a scalar
-  - Broadcasting is only supported if the first argument is an array
-  and the second argument is a scalar
 - [lt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less.html)
-  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [minus](https://docs.scipy.org/doc/numpy/reference/generated/numpy.negative.html)
 - [mul](https://docs.scipy.org/doc/numpy/reference/generated/numpy.multiply.html)
-  - Broadcasting is only supported if the first argument is an array
-  and the second argument is a scalar
 - [neq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.not_equal.html)
-  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [pow](https://docs.scipy.org/doc/numpy/reference/generated/numpy.power.html)
   - The first argument can be either an array or a scalar
-  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [prod](https://docs.scipy.org/doc/numpy/reference/generated/numpy.prod.html)
 - [shape](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html)
   - Note: is a function rather than an attribute. Example: `shape(arr, index)`
@@ -94,7 +79,6 @@ Intrepydd supports the following subset of NumPy libraries:
 - [sqrt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html)
   - Note: the first argument can be either an array or a scalar
 - [sub](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)
-  - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 - [tan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.tan.html)
   - Note: the first argument can be either an array or a scalar
 - [transpose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html)
@@ -168,4 +152,8 @@ The built-in functions are listed here in alphabetical order.
 
 - The arguments must have numeric types. With mixed operand types, the coercion rules for binary arithmetic operators apply. For int operands, the result has the same type as the operands (after coercion) unless the second argument is negative; in that case, all arguments are converted to float and a float result is delivered. For example, `10**2` returns 100, but `10**-2` returns 0.01. 
 
+--->
+
+<!---
+   - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
 --->
