@@ -30,7 +30,9 @@ Intrepydd supports the following subset of NumPy libraries:
 - [acos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccos.html)
   - Note: the first argument can be either an array or a scalar
 - [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
-  # - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
+ <!---
+   - Broadcasting is only supported if the first argument is an array and the second argument is a scalar
+  --->
 - [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
 - [argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)
 - [argmin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
