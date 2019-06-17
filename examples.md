@@ -66,20 +66,20 @@ def sum_up(x2: Array(float32,2)) -> float64:
 
 ### Dense array operations and reduction
 ```python
-    y2a = sqrt(abs(x2))
+    y = sqrt(abs(x2))
 
-    y2b = x2.abs().sqrt()
+    z = x2.abs().sqrt()
     '''
     Element-wise abs is first applied to multi-dimensional array x2, and then
     element-wise sqrt is applied to the abs result (both computations are equivalent).
     '''
 ```
 ```python
-    deltaa = sum(sub(y2a, y2b))
+    delta1 = sum(sub(y, z))
 
-    deltab = sub(y2a, y2b).sum()
+    delta2 = sub(y, z).sum()
     '''
-    Element-wise sub is first applied to multi-dimensional arrays y2a and y2b, and then
+    Element-wise sub is first applied to multi-dimensional arrays y and z, and then
     the total sum of the sub result is computed (both computations are equivalent).
     '''
 ```
