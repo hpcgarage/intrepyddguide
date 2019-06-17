@@ -109,9 +109,9 @@ Intrepydd supports the following subset of CombBLAS libraries:
 - [spmm(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
   - Returns the matrix product of sparse matrices spm1 and spm2 as a sparse matrix.
 - [spmm_dense(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
- -- Returns the matrix product of sparse matrices spm1 and spm2 a dense matrix.
+  - Returns the matrix product of sparse matrices spm1 and spm2 a dense matrix.
 - [spm_add(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a17148c59f16d4908b17b807a959abcc5)
- -- Returns the element-wise sum of sparse matrices spm1 and spm2 as a sparse matrix.
+  - Returns the element-wise sum of sparse matrices spm1 and spm2 as a sparse matrix.
 - [spm_mul(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a1fca28136b736b66fea4f09e01b199c5)
   - Returns the element-wise product of sparse matrices spm1 and   spm2 as a sparse matrix.
 - spm_set_item(spm, v, r, c) 
