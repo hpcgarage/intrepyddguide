@@ -12,8 +12,8 @@ def inc(x1: Array(int32,1), val: int32):
 def sum_up(x2: Array(float32,2)) -> float64:
     '''
     Add up all elements in 2-D array `x2` and return their sum.
-	The array bounds can also be accessed as x2.shape(0) and x2.shape(1).
-	Individual array elements can be accessed as xs[i,j].
+    The array bounds can also be accessed as x2.shape(0) and x2.shape(1).
+    Individual array elements can be accessed as xs[i,j].
     '''	
 ```
 
@@ -46,6 +46,7 @@ def sum_up(x2: Array(float32,2)) -> float64:
     '''
     Iterate through all elements of 2-D array x2.
     '''
+```
 ```python
     for i in range(shape(x2,0)):
         for j in range(shape(x2,1)):
