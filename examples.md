@@ -47,10 +47,11 @@ def sum_up(x2: Array(float64,2)) -> float64:
 
 ### 3. For loops
 ```python
-    for elem in x2:
+    for elem in x1:
         . . .
     '''
-    Iterate through all elements of 2-D array x2.
+    Iterate through all elements of 1-D array x1.
+	Currently, element iteration is not supported for multidimensional arrays.
     '''
 ```
 ```python
