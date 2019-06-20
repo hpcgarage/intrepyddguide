@@ -6,6 +6,7 @@ welcome for additional examples to add to this list:
 3. For loops
 4. Dense array operations and reduction (can also be used for deep learning applications)
 5. Sparse matrix operations (can also be used for graph processing applications)
+6. Performance goal APIs
 
 ### 1. Type declarations in function headers
 ```python
@@ -148,4 +149,17 @@ def my_func(x1: Array(float64,1), x2: Array(float64,2)):
     Sparse matrix matrix multiplication with one sparse matrix s1 and dense array s2,
     and return the result as a dense array x2 (error if s1's # columns != s2's # rows).
     '''
+	```
+
+### 6. Performance Goal APIs
+```python
+import perf_api
+
+perf_api.init_metric()  # Once at very beginning
+
+perf_api.start_metric() # Every time at start of a kernel
+r = matopt.inner_product(v1, v2)
+perf_api.stop_metric()  # Every time at end of a kernel
+
+perf_api.print_metric() # Once at very end
 ```

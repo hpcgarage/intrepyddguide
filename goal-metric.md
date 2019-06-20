@@ -18,7 +18,8 @@ There are four APIs that need to be used to obtain goal metrics:
    metric subsystem, and should be called as close to start of program
    execution as possible.
 2. perf_api.start_metric(), is used to mark the start of a
-computationally relevant region of Python/Intrepydd code.
+computationally relevant region
+of Python/Intrepydd code.
 3. perf_api.stop_metric(), is used to mark the end of a
 computationally relevant region of Python/Intrepydd code.
 4. perf_api.init_metric(), is used to finalize the performance
@@ -63,10 +64,9 @@ To import the perf model in your main files, you can add an `import perf_api`
 statement along with other imports.
 
 # Sample Usage
-The below code snippet demonstrates the API usage in an Intrepydd program:
+The code snippet below demonstrates the API usage in an Intrepydd program:
 
-```
-import matopt_kernel
+```python
 import perf_api
 
 perf_api.init_metric()  # Once at very beginning
