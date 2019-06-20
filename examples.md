@@ -1,7 +1,13 @@
-The following sections show example code fragments for common
-Intrepydd programming idioms.
+The following sections show example code fragments for the common
+Intrepydd programming idioms listed below.  Suggestions are most
+welcome for additional examples to add to this list:
+1. Type declarations in function headers
+2. Array allocation
+3. For loops
+4. Dense array operations and reduction
+5. Sparse matrix operations
 
-### Type declarations in function headers
+### 1. Type declarations in function headers
 ```python
 def inc(x1: Array(int32,1), val: int32):
     '''
@@ -17,7 +23,7 @@ def sum_up(x2: Array(float64,2)) -> float64:
     '''	
 ```
 
-### Array allocation 
+### 2. Array allocation 
 ```python
     x1 = empty(m, int32())
     '''
@@ -39,7 +45,7 @@ def sum_up(x2: Array(float64,2)) -> float64:
     '''
 ```
 
-### For loops
+### 3. For loops
 ```python
     for elem in x2:
         . . .
@@ -64,7 +70,7 @@ def sum_up(x2: Array(float64,2)) -> float64:
     '''
 ```
 
-### Dense array operations and reduction
+### 4. Dense array operations and reduction
 ```python
     y = sqrt(abs(x))
 
@@ -98,7 +104,7 @@ def my_func(x1: Array(float64,1), x2: Array(float64,2)):
     '''
 ```
 
-### Sparse matrix operations
+### 5. Sparse matrix operations
 ```python
     s1 = csr_to_spm(vals, cols, idxs, ncols)
     '''
