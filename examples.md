@@ -105,7 +105,7 @@ def my_func(x1: Array(float64,1), x2: Array(float64,2)):
     '''
 ```
 
-### 5. Sparse matrix operations (can also be used for graph processing)
+### 5. Sparse matrix operations (can also be used for graph processing applications)
 ```python
     s1 = csr_to_spm(vals, cols, idxs, ncols)
     '''
