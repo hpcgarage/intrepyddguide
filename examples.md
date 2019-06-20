@@ -149,7 +149,7 @@ def my_func(x1: Array(float64,1), x2: Array(float64,2)):
     Sparse matrix matrix multiplication with one sparse matrix s1 and dense array s2,
     and return the result as a dense array x2 (error if s1's # columns != s2's # rows).
     '''
-	```
+```
 
 ### 6. Performance Goal APIs
 ```python
