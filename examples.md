@@ -4,8 +4,8 @@ welcome for additional examples to add to this list:
 1. Type declarations in function headers
 2. Array allocation
 3. For loops
-4. Dense array operations and reduction
-5. Sparse matrix operations
+4. Dense array operations and reduction (can also be used for deep learning applications)
+5. Sparse matrix operations (can also be used for graph processing applications)
 
 ### 1. Type declarations in function headers
 ```python
@@ -71,7 +71,7 @@ def sum_up(x2: Array(float64,2)) -> float64:
     '''
 ```
 
-### 4. Dense array operations and reduction
+### 4. Dense array operations and reduction (can also be used for deep learning applications)
 ```python
     y = sqrt(abs(x))
 
@@ -105,7 +105,7 @@ def my_func(x1: Array(float64,1), x2: Array(float64,2)):
     '''
 ```
 
-### 5. Sparse matrix operations
+### 5. Sparse matrix operations (can also be used for graph processing)
 ```python
     s1 = csr_to_spm(vals, cols, idxs, ncols)
     '''
