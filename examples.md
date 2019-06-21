@@ -81,6 +81,7 @@ def sum_up(x2: Array(float64,2)) -> float64:
     Users have to make sure no loop carried dependences due to arrays.
     '''
 ```
+See [Statements](language.md#statements) paragraph for more details on pfor construct.
 
 ### 4. Dense array operations and reduction (can also be used for deep learning applications)
 ```python
