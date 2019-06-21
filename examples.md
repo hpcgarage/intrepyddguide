@@ -3,7 +3,7 @@ Intrepydd programming idioms listed below.  Suggestions are most
 welcome for additional examples to add to this list:
 1. Type declarations in function headers
 2. Array allocation
-3. For loops
+3. For loops (sequential and paralle)
 4. Dense array operations and reduction (can also be used for deep learning applications)
 5. Sparse matrix operations (can also be used for graph processing applications)
 6. Performance goal APIs
@@ -46,7 +46,7 @@ def sum_up(x2: Array(float64,2)) -> float64:
     '''
 ```
 
-### 3. For loops
+### 3. For loops (sequential and paralle)
 ```python
     for elem in x1:
         . . .
@@ -69,6 +69,16 @@ def sum_up(x2: Array(float64,2)) -> float64:
              . . .
     '''
     Iterate through all values of i such that index[src] <= i < index[src+1].
+    '''
+```
+```python
+    pfor i in range(shape(x2,0)):
+        for j in range(1, shape(x2,1)-1):
+            tmp = A[i,j-1] + A[i,j] + A[i,j+1]
+            A[i,j] = tmp / 3.0
+    '''
+    Outer parallel loop and inner sequential (regular) loop.
+    Users have to make sure no loop carried dependences due to arrays.
     '''
 ```
 
