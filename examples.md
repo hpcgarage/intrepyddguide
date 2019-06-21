@@ -2,7 +2,7 @@ The following sections show example code fragments for the common
 Intrepydd programming idioms listed below.  Suggestions are most
 welcome for additional examples to add to this list:
 
-[1. Type declarations in function headers](1-type-declarations-in-function-headers)
+[1. Type declarations in function headers](#1.-type-declarations-in-function-headers)
 
 2. Array allocation
 3. For loops
