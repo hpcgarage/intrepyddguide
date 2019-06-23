@@ -94,7 +94,7 @@ Intrepydd supports the following subset of NumPy libraries:
 ### Subset of CombBLAS libraries
 
 Intrepydd supports the following subset of CombBLAS libraries:
-- [csr_to_spm(arr_values, arr_columns, arr_indexes, nc)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a3fe039448e6e15c8949f066eea204efa)
+- [csr_to_spm(arr_values: Array(float64), arr_columns: Array(int32), arr_indexes: Array(int32), nc: int32)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a3fe039448e6e15c8949f066eea204efa)
   - Construct and return a sparse matrix from three 1-D arrays and a scalar --- arr_values,
     arr_columns, arr_indexes, and nc (number of columns) --- with the values corresponding
     to a CSR representation of spm.
