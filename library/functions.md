@@ -31,9 +31,12 @@ Intrepydd supports the following subset of NumPy libraries:
   - Note: the first argument can be either an array or a scalar
 - [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
 - `bool allclose(Array<T>, T atol)`
-  - [numpy](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
-- [argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)
-- [argmin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
+  - [numpy reference](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
+- `List<int> argmin(Array<T> a)`
+  - [numpy reference](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
+- `List<int> argmax(Array<T> a)`
+  - [numpy reference](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)  
+  
 - [asin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arcsin.html)
   - Note: the first argument can be either an array or a scalar
 - [atan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arctan.html)
