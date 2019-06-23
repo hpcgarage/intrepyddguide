@@ -10,7 +10,7 @@ the underlying algorithms unchanged.
 ### 1. Loop invariant code motion
 
 "Loop invariant code" is the code fragment that are enclosed one or
-more loops and its computation results are the same across loop
+more loops and its computation results are invariant across loop
 iterations.  For instance:
 
 ```python
@@ -21,9 +21,10 @@ iterations.  For instance:
 
 The first statement in the loop computes element-wise abs and sqrt of
 array `x0` and stores the results in array `x1`.  Here the values of
-`x0` are unchanged across iterations, and hence the results stored in
-`x1` are also same.  Such computations (i.e., loop invariant code) can
-be moved out of the loop to reduce program execution time and energy.
+`x0` are invariant across iterations, and hence the results stored in
+`x1` are also invariant.  Such computations (i.e., loop invariant
+code) can be moved out of the loop to reduce program execution time
+and energy.
 
 ```python
     x1 = x0.abs().sqrt()
@@ -39,8 +40,9 @@ code contains many operations, e.g.,:
         x2 = add(x2, x1 @ x1.T)
 ```
 
-Since the results of `x1 @ x1.T` (i.e., Symmetric Rank-k Update for `x1`)
-are loop invariant, we can move out by using a temporal variable, e.g.:
+Since the results of `x1 @ x1.T` (i.e., Symmetric Rank-k Update for
+`x1`) are loop invariant, we can move out by storing its result into a
+temporal variable, e.g.:
 
 ```python
     tmp = x1 @ x1.T
