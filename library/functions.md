@@ -26,17 +26,20 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 
 ### Subset of NumPy libraries
 
-Intrepydd supports the following subset of NumPy libraries:
+Intrepydd supports the following subset of NumPy libraries. Each function name points to the Numpy reference page for the function, and can have some bullets to note its prototype in Intrepydd and other differences from the Numpy version. `T`, `T1` etc stand for either `int32`, `int64`, `float32`, `float64` in function prototype.
 - [acos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccos.html)
   - Note: the first argument can be either an array or a scalar
 - [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
-- `bool allclose(Array<T>, T atol)`
-  - [numpy reference](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
-- `List<int> argmin(Array<T> a)`
-  - [numpy reference](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
-- `List<int> argmax(Array<T> a)`
-  - [numpy reference](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)  
+  - `Array<double> add(Array(T1) x1, T2 x2)`
+  - `Array<double> add(T1 x1, Array(T2) arg)`
   
+- [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
+  - `bool allclose(Array<T>, T atol)`
+- [argmin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
+  - `List<int> argmin(Array<T> a)`
+- [argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)
+  - `List<int> argmax(Array<T> a)`
+
 - [asin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arcsin.html)
   - Note: the first argument can be either an array or a scalar
 - [atan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arctan.html)
@@ -93,35 +96,34 @@ Intrepydd supports the following subset of NumPy libraries:
 
 ### Subset of CombBLAS libraries
 
-Intrepydd supports the following subset of CombBLAS libraries.
-Currently only float64 type is supported for the data type of sparse array.
-- [csr_to_spm(arr_values: Array(float64), arr_columns: Array(int32), arr_indexes: Array(int32), nc: int32)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a3fe039448e6e15c8949f066eea204efa)
+Intrepydd supports the following subset of CombBLAS libraries:
+- [csr_to_spm(arr_values, arr_columns, arr_indexes, nc)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a3fe039448e6e15c8949f066eea204efa)
   - Construct and return a sparse matrix from three 1-D arrays and a scalar --- arr_values,
     arr_columns, arr_indexes, and nc (number of columns) --- with the values corresponding
     to a CSR representation of spm.
-- [empty_spm(nr: int32, nc: int32)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#aec83f0568245560ac797cbf181c47051)
+- [empty_spm(nr, nc)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#aec83f0568245560ac797cbf181c47051)
   - Construct and return an empty sparse matrix with nr rows and nc columns.
 - [spmm(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
   - Return the matrix product of sparse matrices spm1 and spm2 as a sparse matrix.
 - [spmm_dense(spm1 [/ arr1], spm2 [/ arr2])](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
   - Return the matrix product of sparse matrices spm1 and spm2 a dense matrix.
-  - Note: either of frst or second argument can be dense 2-D matrix (Array(float64)).
+  - Note: either of frst or second argument can be dense matrix.
 - [spm_add(spm1, spm2 [/ arr2])](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a17148c59f16d4908b17b807a959abcc5)
   - Return the element-wise sum of sparse matrices spm1 and spm2 as a sparse matrix.
-  - Note: the second argument can be dense 2-D matrix (Array(float64)).
+  - Note: the second argument can be dense matrix.
 - [spm_mul(spm1, spm2 [/ arr2])](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a1fca28136b736b66fea4f09e01b199c5)
   - Return the element-wise product of sparse matrices spm1 and spm2 as a sparse matrix.
-  - Note: the second argument can be dense 2-D matrix (Array(float64)).
-- spm_set_item(spm, v: float64, r: int32, c: int32) 
+  - Note: the second argument can be dense matrix.
+- spm_set_item(spm, v, r, c) 
   - Set item [r,c] of sparse matrix spm to v.
     If item [r,c] already had a nonzero entry in spm, its value is overwritten with v.
-- spm_set_item_unsafe(spm, v: float64, r: int32, c: int32)
+- spm_set_item_unsafe(spm, v, r, c)
   - Set item [r,c] of sparse matrix spm to v, and assumes without checking that item [r,c]
     does not have a nonzero entry in spm.
-- spm_to_csr(spm, arr_values: Array(float64), arr_columns: Array(int32), arr_indexes: Array(int32))
+- spm_to_csr(spm, arr_values, arr_columns, arr_indexes)
   - Takes sparse matrix spm as input, and fills in three 1-D arrays --- arr_values,
     arr_columns, arr_indexes --- with the values corresponding to a CSR representation of spm.
-- [spmv(spm, arr: Array(float64))](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#af6d7c2a1ec21df8ebdd4cff3eb728fc7)
+- [spmv(spm, arr)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#af6d7c2a1ec21df8ebdd4cff3eb728fc7)
   - Returns the product of sparse matrix spm and dense vector arr as a new dense vector.
 
 <!---
