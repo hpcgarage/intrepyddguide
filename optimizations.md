@@ -99,7 +99,7 @@ def my_func(vals: Array(float64, 1), cols: Array(int32, 1), idxs: Array(int32, 1
 
 If the sparsity of `spm2` is 1%, we can simply remove the 99% of
 matrix-matrix multiply `x2 @ x3` as the manner of dead code
-elimination.
+elimination in the above code.
 
 ### 3. Loop fusion
 
