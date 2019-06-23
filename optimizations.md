@@ -53,8 +53,8 @@ result into a temporal variable, e.g.:
 ### 2. Dead code elimination (general case and sparse element-wise)
 
 "Dead code" is the code fragment whose result is unused after its
-definition.  For instance, the first statement in the following loop
-body is dead code, which we can simply eliminate to improve
+definition.  For instance, the first statement in the following
+function body is dead code, which we can simply eliminate to improve
 performance and energy.
 
 ```python
