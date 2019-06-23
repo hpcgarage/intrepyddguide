@@ -67,7 +67,7 @@ Although such dead code fragments may not be common in general, sparse
 arrays can be a good source of this optimization opportunity.
 
 ```python
-def my_func(vals: Array(float64, 1), cols: Array(int32, 1), idxs: Array(int32, 1), ncols: int32,
+def my_func(vals: Array(float64, 1), cols: Array(int32, 1), idxs: Array(int32, 1), nrows: int32, ncols: int32,
             x2: Array(float64, 2), x3: Array(float64, 2)) -> Array(float64):
     spm1 = csr_to_spm(vals, cols, idxs, ncols)
     spm2 = spm_mul(spm1, x2 @ x3)
