@@ -47,7 +47,7 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
   - `(x1: Array(T), x2: Array(T)) -> Array(T)`
   
 - [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
-  - `(Array<T>, T atol) -> bool`
+  - `(arr: Array(T), eps: T) -> bool`
 <!---
  - [argmin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
   - `(Array<T> a) -> List<int>`
