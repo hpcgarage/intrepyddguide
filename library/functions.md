@@ -9,8 +9,8 @@ documentation and also summarize limitations in the Intrepydd version
 relative to the Python version.  We also use Intrepydd-style type
 declarations for function prototypes to summarize the acceptable
 parameters and types.  For convenience, we use `T`, `T1`, `T2`, etc. as
-type parameters below to represent any Intrepydd
-scalar type: `int32`, `int64`, `float32`, or `float64`.
+type parameters below to represent any Intrepydd numeric type: `int32`, `int64`, `float32`, or `float64`, and use `BT`, `BT1`, `BT2` etc. as
+type parameters for Boolean type or numeric type.
 
 Finally, note that all standard Python
 functions and libraries can be used without limitations in the Python main program that
@@ -73,9 +73,9 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
   - Note: argument `order` is not supported. `dtype` is supported by specifying a number of desired type.
   - Example: `empty([2,3], int32())`
 - [eq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array_equal.html)
-  - `(x1: Array(T1), x2: T2) -> Array(bool)`
-  - `(x1: T1, x2: Array(T2)) -> Array(bool)`
-  - `(x1: Array(T1), x2: Array(T2)) -> Array(bool)`
+  - `(x1: Array(BT1), x2: BT2) -> Array(bool)`
+  - `(x1: BT1, x2: Array(BT2)) -> Array(bool)`
+  - `(x1: Array(BT1), x2: Array(BT2)) -> Array(bool)`
 
 - [exp](https://docs.scipy.org/doc/numpy/reference/generated/numpy.exp.html)
   - `(arr: Array(T)) -> Array(double)`
@@ -140,9 +140,9 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
   - `(x1: Array(T1), x2: Array(T2)) -> Array(double)`
   - `(x1: Array(T), x2: Array(T)) -> Array(T)`
 - [neq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.not_equal.html)
-  - `(x1: Array(T1), x2: T2) -> Array(bool)`
-  - `(x1: T1, x2: Array(T2)) -> Array(bool)`
-  - `(x1: Array(T1), x2: Array(T2)) -> Array(bool)`
+  - `(x1: Array(BT1), x2: BT2) -> Array(bool)`
+  - `(x1: BT1, x2: Array(BT2)) -> Array(bool)`
+  - `(x1: Array(BT1), x2: Array(BT2)) -> Array(bool)`
 - [pow](https://docs.scipy.org/doc/numpy/reference/generated/numpy.power.html)
   - `(x1: Array(T1), x2: T2) -> Array(double)`
   - `(x1: T1, x2: Array(T2)) -> Array(double)`
@@ -153,7 +153,7 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
   - `(arr: Array(T)) -> T`
 
 - [shape](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html)
-  - `(arr: Array(T), i: int) -> int`
+  - `(arr: Array(BT), i: int) -> int`
   - Note: is a function rather than an attribute. Example: `shape(arr, index)`
 - [sin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sin.html)
   - `(arr: Array(T)) -> Array(double)`
@@ -174,9 +174,9 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 - [transpose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html)
   - `(arr: Array(T)) -> Array(T)`
 - [zeros](https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html)
-  - `(shape: List(int32), dtype: T) -> Array()`
-  - `(shape: List(int64), dtype: T) -> Array()`
-  - `(shape: int64, dtype: T) -> Array()`
+  - `(shape: List(int32), dtype: BT) -> Array()`
+  - `(shape: List(int64), dtype: BT) -> Array()`
+  - `(shape: int64, dtype: BT) -> Array()`
   - Note: argument `order` is not supported. `dtype` is supported by specifying a number of desired type.
   - Example: `zeros([2,3], int32())`
 - [@](https://docs.scipy.org/doc/numpy/reference/generated/numpy.matmul.html)
