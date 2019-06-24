@@ -98,27 +98,57 @@ NOTE: uncomment later (see issue #39 in gatech git repo)
   - `() -> float64`
   - `(x: T) -> float64`  
 - [ge](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater_equal.html)
+  - `(x1: Array(T1), x2: T2) -> Array(bool)`
+  - `(x1: T1, x2: Array(T2)) -> Array(bool)`
+  - `(x1: Array(T1), x2: Array(T2)) -> Array(bool)`
+
 - [gt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater.html)
+  - `(x1: Array(T1), x2: T2) -> Array(bool)`
+  - `(x1: T1, x2: Array(T2)) -> Array(bool)`
+  - `(x1: Array(T1), x2: Array(T2)) -> Array(bool)`
+  
 - [innerprod](https://docs.s()https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.htmlcipy.org/doc/numpy/reference/generated/numpy.ma.innerproduct.html)
+  - `(arr1: Array(T1), arr2: Array(T2)) -> double`
 - [int32](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
   - Note: Convert a number to int32 type
+  - `() -> int32`
+  - `(x: T) -> int32`  
 - [int64](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
   - Note: Convert a number to int64 type
+  - `() -> int64`
+  - `(x: T) -> int64`  
 - [isinf](https://docs.scipy.org/doc/numpy/reference/generated/numpy.isinf.html)
-  - Note: the first argument can be either an array or a scalar
+  - `(arr: Array(T)) -> Array(bool)`
+  - `(val: T) -> bool`
+
 - [isnan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.isnan.html)
-  - Note: the first argument can be either an array or a scalar
+  - `(arr: Array(T)) -> Array(bool)`
+  - `(val: T) -> bool`
+
 - [le](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less_equal.html)
+  - `(x1: Array(T1), x2: T2) -> Array(bool)`
+  - `(x1: T1, x2: Array(T2)) -> Array(bool)`
+  - `(x1: Array(T1), x2: Array(T2)) -> Array(bool)`
 - [log](https://docs.scipy.org/doc/numpy/reference/generated/numpy.log.html)
-  - Note: the first argument can be either an array or a scalar
+  - `(x1: Array(T1), x2: T2) -> Array(double)`
+  - `(x1: T1, x2: Array(T2)) -> Array(double)`
+  - `(x1: Array(T1), x2: Array(T2)) -> Array(double)`
+  - `(x1: T1, x2: T2) -> double`
 - [lt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less.html)
+  - `(x1: Array(T1), x2: T2) -> Array(bool)`
+  - `(x1: T1, x2: Array(T2)) -> Array(bool)`
+  - `(x1: Array(T1), x2: Array(T2)) -> Array(bool)`
 - [minus](https://docs.scipy.org/doc/numpy/reference/generated/numpy.negative.html)
+  - `(arr: Array(T)) -> Array(T)`
 - [mul](https://docs.scipy.org/doc/numpy/reference/generated/numpy.multiply.html)
   - `(x1: Array(T1), x2: T2) -> Array(double)`
   - `(x1: T1, x2: Array(T2)) -> Array(double)`
   - `(x1: Array(T1), x2: Array(T2)) -> Array(double)`
   - `(x1: Array(T), x2: Array(T)) -> Array(T)`
 - [neq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.not_equal.html)
+  - `(x1: Array(T1), x2: T2) -> Array(bool)`
+  - `(x1: T1, x2: Array(T2)) -> Array(bool)`
+  - `(x1: Array(T1), x2: Array(T2)) -> Array(bool)`
 - [pow](https://docs.scipy.org/doc/numpy/reference/generated/numpy.power.html)
   - `(x1: Array(T1), x2: T2) -> Array(double)`
   - `(x1: T1, x2: Array(T2)) -> Array(double)`
@@ -148,7 +178,7 @@ NOTE: uncomment later (see issue #39 in gatech git repo)
   - `(shape: List(int64), dtype: T) -> Array()`
   - `(shape: int64, dtype: T) -> Array()`
   - Note: argument `order` is not supported. `dtype` is supported by specifying a number of desired type.
-  - Example: `empty([2,3], int32())`
+  - Example: `zeros([2,3], int32())`
 - [@](https://docs.scipy.org/doc/numpy/reference/generated/numpy.matmul.html)
   - Syntax sugar for matrix matrix multiplication
   - Equivalent function is `matmult`
