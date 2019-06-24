@@ -31,16 +31,16 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
   - Note: the first argument can be either an array or a scalar
 - [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
   - `(Array<T1> x1, T2 x2) -> Array<double>`
-  - `(T1 arg, Array<T2> arr) -> Array<double>`
-  - `(Array<T1> arr1, Array<T2> arr2) -> Array<double>`
-  - `(Array<T> arr1, Array<T> arr2) -> Array<T>`
+  - `(T1 x1, Array<T2> x2) -> Array<double>`
+  - `(Array<T1> x1, Array<T2> x2) -> Array<double>`
+  - `(Array<T> x1, Array<T> x2) -> Array<T>`
   
 - [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
-  - `bool allclose(Array<T>, T atol)`
+  - `(Array<T>, T atol) -> bool`
 - [argmin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
-  - `List<int> argmin(Array<T> a)`
+  - `(Array<T> a) -> List<int>`
 - [argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)
-  - `List<int> argmax(Array<T> a)`
+  - `(Array<T> a) -> List<int>`
 
 - [asin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arcsin.html)
   - Note: the first argument can be either an array or a scalar
@@ -78,11 +78,15 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 - [minus](https://docs.scipy.org/doc/numpy/reference/generated/numpy.negative.html)
 - [mul](https://docs.scipy.org/doc/numpy/reference/generated/numpy.multiply.html)
   - `(Array<T1> x1, T2 x2) -> Array<double>`
-  - `(T1 arg, Array<T2> arr) -> Array<double>`
-  - `(Array<T1> arr1, Array<T2> arr2) -> Array<double>`
-  - `(Array<T> arr1, Array<T> arr2) -> Array<T>`
+  - `(T1 x1, Array<T2> x2) -> Array<double>`
+  - `(Array<T1> x1, Array<T2> x2) -> Array<double>`
+  - `(Array<T> x1, Array<T> x2) -> Array<T>`
 - [neq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.not_equal.html)
 - [pow](https://docs.scipy.org/doc/numpy/reference/generated/numpy.power.html)
+  - `(Array<T1> x1, T2 x2) -> Array<double>`
+  - `(T1 x1, Array<T2> x2) -> Array<double>`
+  - `(Array<T1> x1, Array<T2> x2) -> Array<double>`
+  - `(T1 x1, T2 x2) -> double`
   - The first argument can be either an array or a scalar
 - [prod](https://docs.scipy.org/doc/numpy/reference/generated/numpy.prod.html)
 - [shape](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html)
@@ -93,9 +97,9 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
   - Note: the first argument can be either an array or a scalar
 - [sub](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)
   - `(Array<T1> x1, T2 x2) -> Array<double>`
-  - `(T1 arg, Array<T2> arr) -> Array<double>`
-  - `(Array<T1> arr1, Array<T2> arr2) -> Array<double>`
-  - `(Array<T> arr1, Array<T> arr2) -> Array<T>`
+  - `(T1 x1, Array<T2> x2) -> Array<double>`
+  - `(Array<T1> x1, Array<T2> x2) -> Array<double>`
+  - `(Array<T> x1, Array<T> x2) -> Array<T>`
 
 - [tan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.tan.html)
   - Note: the first argument can be either an array or a scalar
