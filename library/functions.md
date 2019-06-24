@@ -37,7 +37,7 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 
 ### Subset of NumPy libraries
 
-Intrepydd supports the following subset of NumPy libraries. Each function name points to the Numpy reference page for the function, and can have some bullets to note its prototype in Intrepydd and other differences from the Numpy version. 
+Intrepydd supports the following subset of NumPy libraries. Each function name points to the Numpy reference page for the function, and can have some bullets to note its prototype in Intrepydd (often only supports a subset of parameters) and other differences from the Numpy version. 
 - [acos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccos.html)
   - `(arr: Array(T)) -> Array(double)`
   - `(val: T) -> double`
