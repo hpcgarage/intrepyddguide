@@ -137,9 +137,6 @@ elimination in the above code.
             B[i,j] = (A[i,j] + A[i,j-1] + A[i,j+1] + A[i-1,j] + A[i+1,j]) / 5.0
 ```
 
-Reference:
-https://software.intel.com/en-us/articles/predicting-and-measuring-parallel-performance
-
 ### 4. Locality optimizations
 
 ```python
