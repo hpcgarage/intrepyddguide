@@ -139,6 +139,8 @@ elimination in the above code.
 
 ### 4. Locality optimizations
 
+Loop fusion.
+
 ```python
 # Example 4-1 (before loop fusion)
     for i in range(n):
@@ -181,6 +183,8 @@ elimination in the above code.
             F[i,j] = D[i,j] + D[i,j-1] + D[i,j+1] + D[i-1,j] + D[i+1,j]
             G[i,j] = F[i,j] / 5.0
 ```
+
+Loop permutation.
 
 ```python
 # Example 4-3 (before loop permutation)
