@@ -125,15 +125,15 @@ elimination in the above code.
 
 ```python
 # Example 3 (after fine-grained loop parallelization)
-    for i in range(1, n-1):
-        pfor j in range(1, m-1):
+    for i in range(1, n-1):       # Sequential
+        pfor j in range(1, m-1):  # Parallel
             B[i,j] = (A[i,j] + A[i,j-1] + A[i,j+1] + A[i-1,j] + A[i+1,j]) / 5.0
 ```
 
 ```python
 # Example 3 (after coarse-grained loop parallelization)
-    for i in range(1, n-1):
-        pfor j in range(1, m-1):
+    pfor i in range(1, n-1):      # Parallel
+        for j in range(1, m-1):   # Sequential
             B[i,j] = (A[i,j] + A[i,j-1] + A[i,j+1] + A[i-1,j] + A[i+1,j]) / 5.0
 ```
 
