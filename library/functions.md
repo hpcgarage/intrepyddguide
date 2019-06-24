@@ -30,10 +30,10 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 - [acos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccos.html)
   - Note: the first argument can be either an array or a scalar
 - [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
-  - `Array<double> add(Array<T1> x1, T2 x2)`
-  - `Array<double> add(T1 x1, Array<T2> x2)`
-  - `Array<double> add(Array<T1> x1, Array<T2> x2)`
-  - `Array<T> add(Array<T> x1, Array<T> x2)`
+  - `(Array<T1> x1, T2 x2) -> Array<double>`
+  - `(T1 arg, Array<T2> arr) -> Array<double>`
+  - `(Array<T1> arr1, Array<T2> arr2) -> Array<double>`
+  - `(Array<T> arr1, Array<T> arr2) -> Array<T>`
   
 - [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
   - `bool allclose(Array<T>, T atol)`
@@ -77,6 +77,10 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 - [lt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less.html)
 - [minus](https://docs.scipy.org/doc/numpy/reference/generated/numpy.negative.html)
 - [mul](https://docs.scipy.org/doc/numpy/reference/generated/numpy.multiply.html)
+  - `(Array<T1> x1, T2 x2) -> Array<double>`
+  - `(T1 arg, Array<T2> arr) -> Array<double>`
+  - `(Array<T1> arr1, Array<T2> arr2) -> Array<double>`
+  - `(Array<T> arr1, Array<T> arr2) -> Array<T>`
 - [neq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.not_equal.html)
 - [pow](https://docs.scipy.org/doc/numpy/reference/generated/numpy.power.html)
   - The first argument can be either an array or a scalar
@@ -88,6 +92,11 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 - [sqrt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html)
   - Note: the first argument can be either an array or a scalar
 - [sub](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)
+  - `(Array<T1> x1, T2 x2) -> Array<double>`
+  - `(T1 arg, Array<T2> arr) -> Array<double>`
+  - `(Array<T1> arr1, Array<T2> arr2) -> Array<double>`
+  - `(Array<T> arr1, Array<T> arr2) -> Array<T>`
+
 - [tan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.tan.html)
   - Note: the first argument can be either an array or a scalar
 - [transpose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html)
