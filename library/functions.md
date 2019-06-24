@@ -30,8 +30,10 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 - [acos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccos.html)
   - Note: the first argument can be either an array or a scalar
 - [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
-  - `Array<double> add(Array(T1) x1, T2 x2)`
-  - `Array<double> add(T1 x1, Array(T2) arg)`
+  - `Array<double> add(Array<T1> x1, T2 x2)`
+  - `Array<double> add(T1 x1, Array<T2> x2)`
+  - `Array<double> add(Array<T1> x1, Array<T2> x2)`
+  - `Array<T> add(Array<T> x1, Array<T> x2)`
   
 - [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
   - `bool allclose(Array<T>, T atol)`
