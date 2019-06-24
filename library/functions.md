@@ -30,15 +30,23 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
   - `(s: Array(BT)) -> int64`
   - `(s: List(BT)) -> int64`
 - [max](https://docs.python.org/3/library/functions.html#max)
+  - `(arr: Array(T)) -> T`
 - [min](https://docs.python.org/3/library/functions.html#min)
+  - `(arr: Array(T)) -> T`
 - [pow](https://docs.python.org/3/library/functions.html#pow)
+  - `(base: float64, exp: float64) -> float64`
   - Note: the last argument `z` is not supported
 - [print](https://docs.python.org/3/library/functions.html#print)
+  - `(v: BT)`
+  - `(ls: List(BT))`
   - Note: only the first argument is supported, and only printing
     primitive type is supported.  General calls to print can be
     performed in the Python main program that invokes the Intrepydd code.
 - [range](https://docs.python.org/3/library/functions.html#func-range)
+  - `(len: int64) -> List(int)`
+  - Note: When used together with `for ... in`, the prototype is `(start: int64, stop: int64, step: int64) -> List(int)`
 - [sum](https://docs.python.org/3/library/functions.html#sum)
+  - `(arr: Array(T)) -> T`
 
 ### Subset of NumPy libraries
 
