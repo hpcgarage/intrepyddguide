@@ -40,11 +40,10 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 <!---
  - [argmin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
   - `(Array<T> a) -> List<int>`
-NOTE: uncomment after fix to issue #39 is pushed to SDH gitlab
---->
 - [argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)
   - `(Array<T> a) -> List<int>`
-
+NOTE: uncomment later (see issue #39 in gatech git repo)
+--->
 - [asin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arcsin.html)
   - Note: the first argument can be either an array or a scalar
 - [atan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arctan.html)
