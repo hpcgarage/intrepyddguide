@@ -29,8 +29,8 @@ extension).
 8. Execute the new Python main program with calls to the optimized
    Intrepydd code, and record its new Energy-Delay-Squared goal metric (in
    Joules-Seconds^2).
-9. Try using pfor loops to reduce the delay term in the goal metric via parallelism,
-   and also fusing/merging loops to reduce the energy term with
-   improved locality, e.g., by replacing multiple passes over an array
-   by a single pass.
-10. Repeat steps 2-9 for additional performance-critical code regions.
+9. Try improving the performance of the code in the .pydd file by
+   algorithmic improvements, parallelization and locality
+   optimizations.
+10. Repeat steps 7-9 for the current performance-critical code region.
+11. Repeat steps 2-10 for additional performance-critical code regions.
