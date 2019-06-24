@@ -10,7 +10,7 @@ relative to the Python version.  We also use Intrepydd-style type
 declarations for function prototypes to summarize the acceptable
 parameters and types.  For convenience, we use `T`, `T1`, `T2`, etc. as
 type parameters below to represent any Intrepydd numeric type: `int32`, `int64`, `float32`, or `float64`, and use `BT`, `BT1`, `BT2` etc. as
-type parameters for Boolean type or numeric type.
+type parameters to represent any numeric type or `bool`.
 
 Finally, note that all standard Python
 functions and libraries can be used without limitations in the Python main program that
@@ -19,11 +19,16 @@ invokes Intrepydd functions.
 ### Subset of Python built-in functions
 
 Intrepydd supports the following subset of [Python built-in functions](https://docs.python.org/3/library/functions.html#built-in-functions):
-- [abs](https://docs.python.org/3/library/functions.html#abs)
-
+- [abs](https://docs.python.org/3/library/functions.html#abs) `(x: T1) -> T1`
 - [all](https://docs.python.org/3/library/functions.html#all)
-- [any](https://docs.python.org/3/library/functions.html#any)  
+  - `(iterable: Array(BT)) -> bool`
+  - `(iterable: List(BT)) -> bool`
+- [any](https://docs.python.org/3/library/functions.html#any)
+  - `(iterable: Array(BT)) -> bool`
+  - `(iterable: List(BT)) -> bool`
 - [len](https://docs.python.org/3/library/functions.html#len)
+  - `(s: Array(BT)) -> int64`
+  - `(s: List(BT)) -> int64`
 - [max](https://docs.python.org/3/library/functions.html#max)
 - [min](https://docs.python.org/3/library/functions.html#min)
 - [pow](https://docs.python.org/3/library/functions.html#pow)
@@ -41,16 +46,13 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 - [acos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccos.html)
   - `(arr: Array(T)) -> Array(double)`
   - `(val: T) -> double`
-  
 - [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
   - `(x1: Array(T1), x2: T2) -> Array(double)`
   - `(x1: T1, x2: Array(T2)) -> Array(double)`
   - `(x1: Array(T1), x2: Array(T2)) -> Array(double)`
   - `(x1: Array(T), x2: Array(T)) -> Array(T)`
-  
 - [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
   - `(arr: Array(T), eps: T) -> bool`
-
 - [asin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arcsin.html)
   - `(arr: Array(T)) -> Array(double)`
   - `(val: T) -> double`
@@ -76,17 +78,14 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
   - `(x1: Array(BT1), x2: BT2) -> Array(bool)`
   - `(x1: BT1, x2: Array(BT2)) -> Array(bool)`
   - `(x1: Array(BT1), x2: Array(BT2)) -> Array(bool)`
-
 - [exp](https://docs.scipy.org/doc/numpy/reference/generated/numpy.exp.html)
   - `(arr: Array(T)) -> Array(double)`
   - `(val: T) -> double`
-
   - Note: the first argument can be either an array or a scalar
 - [float32](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
   - Convert a number to float32 type
   - `() -> float32`
   - `(x: T) -> float32`
-
 - [float64](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
   - Convert a number to float64 type
   - `() -> float64`
@@ -95,12 +94,10 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
   - `(x1: Array(T1), x2: T2) -> Array(bool)`
   - `(x1: T1, x2: Array(T2)) -> Array(bool)`
   - `(x1: Array(T1), x2: Array(T2)) -> Array(bool)`
-
 - [gt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater.html)
   - `(x1: Array(T1), x2: T2) -> Array(bool)`
   - `(x1: T1, x2: Array(T2)) -> Array(bool)`
   - `(x1: Array(T1), x2: Array(T2)) -> Array(bool)`
-  
 - [innerprod](https://docs.s()https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.htmlcipy.org/doc/numpy/reference/generated/numpy.ma.innerproduct.html)
   - `(arr1: Array(T1), arr2: Array(T2)) -> double`
 - [int32](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
@@ -114,11 +111,9 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 - [isinf](https://docs.scipy.org/doc/numpy/reference/generated/numpy.isinf.html)
   - `(arr: Array(T)) -> Array(bool)`
   - `(val: T) -> bool`
-
 - [isnan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.isnan.html)
   - `(arr: Array(T)) -> Array(bool)`
   - `(val: T) -> bool`
-
 - [le](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less_equal.html)
   - `(x1: Array(T1), x2: T2) -> Array(bool)`
   - `(x1: T1, x2: Array(T2)) -> Array(bool)`
@@ -151,7 +146,6 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
   - The first argument can be either an array or a scalar
 - [prod](https://docs.scipy.org/doc/numpy/reference/generated/numpy.prod.html)
   - `(arr: Array(T)) -> T`
-
 - [shape](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html)
   - `(arr: Array(BT), i: int) -> int`
   - Note: is a function rather than an attribute. Example: `shape(arr, index)`
@@ -161,13 +155,11 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 - [sqrt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html)
   - `(arr: Array(T)) -> Array(double)`
   - `(var: T) -> double`
-
 - [sub](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)
   - `(x1: Array(T1), x2: T2) -> Array(double)`
   - `(x1: T1, x2: Array(T2)) -> Array(double)`
   - `(x1: Array(T1), x2: Array(T2)) -> Array(double)`
   - `(x1: Array(T), x2: Array(T)) -> Array(T)`
-
 - [tan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.tan.html)
   - `(arr: Array(T)) -> Array(double)`
   - `(val: T) -> double`
@@ -184,7 +176,6 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
   - Equivalent function is `matmult`
 
 ### Subset of CombBLAS libraries
-
 Intrepydd supports the following subset of CombBLAS libraries.
 Currently only float64 type is supported for the data type of sparse array.
 - [csr_to_spm(arr_values: Array(float64), arr_columns: Array(int32), arr_indexes: Array(int32), nc: int32)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a3fe039448e6e15c8949f066eea204efa)
