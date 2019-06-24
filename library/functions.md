@@ -67,8 +67,15 @@ NOTE: uncomment later (see issue #39 in gatech git repo)
   - `(arr: Array(T)) -> Array(double)`
   - `(val: T) -> double`
 - [div](https://docs.scipy.org/doc/numpy/reference/generated/numpy.divide.html)
+  - `(x1: Array(T1), x2: T2) -> Array(double)`
+  - `(x1: T1, x2: Array(T2)) -> Array(double)`
+  - `(x1: Array(T1), x2: Array(T2)) -> Array(double)`
 - [elemwise_not](https://docs.scipy.org/doc/numpy/reference/generated/numpy.logical_not.html)
+  - `(arr: Array(T)) -> Array(bool)`
 - [empty](https://docs.scipy.org/doc/numpy/reference/generated/numpy.empty.html)
+  - `(shape: List(int32), dtype: T) -> Array()`
+  - `(shape: List(int64), dtype: T) -> Array()`
+  - `(shape: int64, dtype: T) -> Array()`
   - Note: argument `order` is not supported. `dtype` is supported in another way.
   - Example: `empty([2,3], int32())`
 - [eq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array_equal.html)
