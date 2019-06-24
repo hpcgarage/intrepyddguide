@@ -2,14 +2,24 @@
 
 Intrepydd v0.2 supports the following classes of multiple built-in functions  and library
 wrappers for
-the convenience of the programmer. Recall that all standard Python
-functions and libraries can be used in the Python main program that
+the convenience of the programmer.  When an entry below corresponds to
+a 
+standard Python function or library, we include a link to the Python
+documentation and also summarize limitations in the Intrepydd version
+relative to the Python version.  We also use Intrepydd-style type
+declarations for function prototypes to summarize the acceptable
+parameters and types.  For convenience, we use `T1`, `T2`, etc. as
+type parameters below to represent any Intrepydd
+scalar type: `int32`, `int64`, `float32`, or `float64`.
+
+Finally, note that all standard Python
+functions and libraries can be used without limitations in the Python main program that
 invokes Intrepydd functions.
 
 ### Subset of Python built-in functions
 
 Intrepydd supports the following subset of [Python built-in functions](https://docs.python.org/3/library/functions.html#built-in-functions):
-- [abs](https://docs.python.org/3/library/functions.html#abs)
+- [abs](https://docs.python.org/3/library/functions.html#abs)`(x: T1) -> T1`
 - [all](https://docs.python.org/3/library/functions.html#all)
 - [any](https://docs.python.org/3/library/functions.html#any)  
 - [len](https://docs.python.org/3/library/functions.html#len)
