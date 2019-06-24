@@ -23,6 +23,7 @@ Intrepydd code example:
     for val in set:
         x1 = x0.abs().sqrt()
         x2 = add(x1, val)
+        ...  # more code to use x2
 ```
 The first statement in the loop computes the element-wise abs and sqrt of
 array `x0` and stores the result in array `x1`.  In this example.  the value of
@@ -35,6 +36,7 @@ and energy:
     x1 = x0.abs().sqrt()
     for val in set:
         x2 = add(x1, val)
+        ...  # more code to use x2
 ```
 After the LICM, there are fewer operations performed by the algorithm because
 the operations to evaluate `x0.abs().sqrt()` are only performed once,
