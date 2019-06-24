@@ -39,7 +39,9 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 
 Intrepydd supports the following subset of NumPy libraries. Each function name points to the Numpy reference page for the function, and can have some bullets to note its prototype in Intrepydd and other differences from the Numpy version. 
 - [acos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccos.html)
-  - Note: the first argument can be either an array or a scalar
+  - `(arr: Array(T)) -> Array(double)`
+  - `(val: T) -> double`
+  
 - [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
   - `(x1: Array(T1), x2: T2) -> Array(double)`
   - `(x1: T1, x2: Array(T2)) -> Array(double)`
@@ -56,11 +58,14 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 NOTE: uncomment later (see issue #39 in gatech git repo)
 --->
 - [asin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arcsin.html)
-  - Note: the first argument can be either an array or a scalar
+  - `(arr: Array(T)) -> Array(double)`
+  - `(val: T) -> double`
 - [atan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arctan.html)
-  - Note: the first argument can be either an array or a scalar
+  - `(arr: Array(T)) -> Array(double)`
+  - `(val: T) -> double`
 - [cos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html)
-  - Note: the first argument can be either an array or a scalar
+  - `(arr: Array(T)) -> Array(double)`
+  - `(val: T) -> double`
 - [div](https://docs.scipy.org/doc/numpy/reference/generated/numpy.divide.html)
 - [elemwise_not](https://docs.scipy.org/doc/numpy/reference/generated/numpy.logical_not.html)
 - [empty](https://docs.scipy.org/doc/numpy/reference/generated/numpy.empty.html)
@@ -105,7 +110,8 @@ NOTE: uncomment later (see issue #39 in gatech git repo)
 - [shape](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html)
   - Note: is a function rather than an attribute. Example: `shape(arr, index)`
 - [sin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sin.html)
-  - Note: the first argument can be either an array or a scalar
+  - `(arr: Array(T)) -> Array(double)`
+  - `(val: T) -> double`
 - [sqrt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html)
   - Note: the first argument can be either an array or a scalar
 - [sub](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)
@@ -115,7 +121,8 @@ NOTE: uncomment later (see issue #39 in gatech git repo)
   - `(x1: Array(T), x2: Array(T)) -> Array(T)`
 
 - [tan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.tan.html)
-  - Note: the first argument can be either an array or a scalar
+  - `(arr: Array(T)) -> Array(double)`
+  - `(val: T) -> double`
 - [transpose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html)
 - [zeros](https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html)
 - [@](https://docs.scipy.org/doc/numpy/reference/generated/numpy.matmul.html)
