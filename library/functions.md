@@ -36,11 +36,11 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
   - `(Array<T> arr1, Array<T> arr2) -> Array<T>`
   
 - [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
-  - `bool allclose(Array<T>, T atol)`
+  - `(Array<T>, T atol) -> bool`
 - [argmin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
-  - `List<int> argmin(Array<T> a)`
+  - `(Array<T> a) -> List<int>`
 - [argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)
-  - `List<int> argmax(Array<T> a)`
+  - `(Array<T> a) -> List<int>`
 
 - [asin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arcsin.html)
   - Note: the first argument can be either an array or a scalar
