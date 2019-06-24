@@ -1,6 +1,6 @@
 # Intrepydd's built-in functions and libraries
 
-Intrepydd v0.2 supports the following classes of multiple built-in functions  and library
+Intrepydd v0.2 supports the following classes of  built-in functions  and library
 wrappers for
 the convenience of the programmer.  When an entry below corresponds to
 a 
