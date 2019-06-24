@@ -114,4 +114,101 @@ elimination in the above code.
 
 ### 3. Parallelization 
 
+```python
+# Example 3 (before loop parallelization)
+    for i in range(1, n-1):
+        for j in range(1, m-1):
+            B[i,j] = (A[i,j] + A[i,j-1] + A[i,j+1] + A[i-1,j] + A[i+1,j]) / 5.0
+```
+
+```python
+# Example 3 (after fine-grained loop parallelization)
+    for i in range(1, n-1):
+        pfor j in range(1, m-1):
+            B[i,j] = (A[i,j] + A[i,j-1] + A[i,j+1] + A[i-1,j] + A[i+1,j]) / 5.0
+```
+
+```python
+# Example 3 (after coarse-grained loop parallelization)
+    for i in range(1, n-1):
+        pfor j in range(1, m-1):
+            B[i,j] = (A[i,j] + A[i,j-1] + A[i,j+1] + A[i-1,j] + A[i+1,j]) / 5.0
+```
+
+Reference:
+https://software.intel.com/en-us/articles/predicting-and-measuring-parallel-performance
+
 ### 4. Locality optimizations
+
+```python
+# Example 4-1 (before loop fusion)
+    for i in range(n):
+        B[i] += A[i] * alpha
+    for i in range(n):
+        C[i] += B[i] * beta
+```
+
+```python
+# Example 4-1 (after loop fusion)
+    for i in range(n):
+        B[i] += A[i] * alpha
+        C[i] += B[i] * beta
+```
+
+```python
+# Example 4-2 (before loop fusion)
+    for i in range(n):
+        for j in range(m):
+            D[i,j] = A[i,j] + B[i,j] + C[i,j]
+    for i in range(n):
+        for j in range(m):
+            E[i,j] = D[i,j] / 3.0
+    for i in range(1, n-1):
+        for j in range(1, m-1):
+            F[i,j] = D[i,j] + D[i,j-1] + D[i,j+1] + D[i-1,j] + D[i+1,j]
+    for i in range(1, n-1):
+        for j in range(1, m-1):
+            G[i,j] = F[i,j] / 5.0
+```
+
+```python
+# Example 4-2 (after loop fusion)
+    for i in range(n):
+        for j in range(m):
+            D[i,j] = A[i,j] + B[i,j] + C[i,j]
+            E[i,j] = D[i,j] / 3.0
+    for i in range(1, n-1):
+        for j in range(1, m-1):
+            F[i,j] = D[i,j] + D[i,j-1] + D[i,j+1] + D[i-1,j] + D[i+1,j]
+            G[i,j] = F[i,j] / 5.0
+```
+
+```python
+# Example 4-3 (before loop permutation)
+    for i in range(n):
+        for j in range(m):  # Stride access on: A[j,i], B[j,i], C[j,i]
+            D[i,j] = A[j,i] + B[j,i] + C[j,i]
+```
+
+```python
+# Example 4-3 (after loop permutation)
+    for j in range(m):
+        for i in range(n):  # Stride access on: D[i,j]
+            D[i,j] = A[j,i] + B[j,i] + C[j,i]
+```
+
+```python
+# Example 4-4 (before loop permutation)
+    for i in range(ni):
+        for j in range(nj):
+           for k in range(nk):  # Stride access on: B[k,j]
+            C[i,j] += alpha * A[i,k] * B[k,j]
+```
+
+```python
+# Example 4-4 (after loop permutation)
+    for i in range(ni):
+        for k in range(nk):
+            for j in range(nj):  # No stride access on all arrays
+                C[i,j] += alpha * A[i,k] * B[k,j]
+```
