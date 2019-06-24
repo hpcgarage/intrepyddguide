@@ -20,7 +20,7 @@ invokes Intrepydd functions.
 
 Intrepydd supports the following subset of [Python built-in functions](https://docs.python.org/3/library/functions.html#built-in-functions):
 - [abs](https://docs.python.org/3/library/functions.html#abs)
-  - `(x: T1) -> T1`
+
 - [all](https://docs.python.org/3/library/functions.html#all)
 - [any](https://docs.python.org/3/library/functions.html#any)  
 - [len](https://docs.python.org/3/library/functions.html#len)
@@ -156,13 +156,18 @@ NOTE: uncomment later (see issue #39 in gatech git repo)
   - `(x1: T1, x2: T2) -> double`
   - The first argument can be either an array or a scalar
 - [prod](https://docs.scipy.org/doc/numpy/reference/generated/numpy.prod.html)
+  - `(arr: Array(T)) -> T`
+
 - [shape](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html)
+  - `(arr: Array(T), i: int) -> int`
   - Note: is a function rather than an attribute. Example: `shape(arr, index)`
 - [sin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sin.html)
   - `(arr: Array(T)) -> Array(double)`
   - `(val: T) -> double`
 - [sqrt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html)
-  - Note: the first argument can be either an array or a scalar
+  - `(arr: Array(T)) -> Array(double)`
+  - `(var: T) -> double`
+
 - [sub](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)
   - `(x1: Array(T1), x2: T2) -> Array(double)`
   - `(x1: T1, x2: Array(T2)) -> Array(double)`
@@ -173,6 +178,7 @@ NOTE: uncomment later (see issue #39 in gatech git repo)
   - `(arr: Array(T)) -> Array(double)`
   - `(val: T) -> double`
 - [transpose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html)
+  - `(arr: Array(T)) -> Array(T)`
 - [zeros](https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html)
   - `(shape: List(int32), dtype: T) -> Array()`
   - `(shape: List(int64), dtype: T) -> Array()`
