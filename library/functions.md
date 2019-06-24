@@ -8,7 +8,7 @@ standard Python function or library, we include a link to the Python
 documentation and also summarize limitations in the Intrepydd version
 relative to the Python version.  We also use Intrepydd-style type
 declarations for function prototypes to summarize the acceptable
-parameters and types.  For convenience, we use `T1`, `T2`, etc. as
+parameters and types.  For convenience, we use `T`, `T1`, `T2`, etc. as
 type parameters below to represent any Intrepydd
 scalar type: `int32`, `int64`, `float32`, or `float64`.
 
@@ -41,10 +41,10 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 - [acos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccos.html)
   - Note: the first argument can be either an array or a scalar
 - [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
-  - `(Array<T1> x1, T2 x2) -> Array<double>`
-  - `(T1 x1, Array<T2> x2) -> Array<double>`
-  - `(Array<T1> x1, Array<T2> x2) -> Array<double>`
-  - `(Array<T> x1, Array<T> x2) -> Array<T>`
+  - `(x1: Array(T1), x2: T2) -> Array(double)`
+  - `(x1: T1, x2: Array(T2)) -> Array(double)`
+  - `(x1: Array(T1), x2: Array(T2)) -> Array(double)`
+  - `(x1: Array(T), x2: Array(T)) -> Array(T)`
   
 - [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
   - `(Array<T>, T atol) -> bool`
@@ -90,10 +90,10 @@ NOTE: uncomment later (see issue #39 in gatech git repo)
 - [lt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.less.html)
 - [minus](https://docs.scipy.org/doc/numpy/reference/generated/numpy.negative.html)
 - [mul](https://docs.scipy.org/doc/numpy/reference/generated/numpy.multiply.html)
-  - `(Array<T1> x1, T2 x2) -> Array<double>`
-  - `(T1 x1, Array<T2> x2) -> Array<double>`
-  - `(Array<T1> x1, Array<T2> x2) -> Array<double>`
-  - `(Array<T> x1, Array<T> x2) -> Array<T>`
+  - `(x1: Array(T1), x2: T2) -> Array(double)`
+  - `(x1: T1, x2: Array(T2)) -> Array(double)`
+  - `(x1: Array(T1), x2: Array(T2)) -> Array(double)`
+  - `(x1: Array(T), x2: Array(T)) -> Array(T)`
 - [neq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.not_equal.html)
 - [pow](https://docs.scipy.org/doc/numpy/reference/generated/numpy.power.html)
   - `(x1: Array(T1), x2: T2) -> Array(double)`
@@ -109,10 +109,10 @@ NOTE: uncomment later (see issue #39 in gatech git repo)
 - [sqrt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html)
   - Note: the first argument can be either an array or a scalar
 - [sub](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)
-  - `(Array<T1> x1, T2 x2) -> Array<double>`
-  - `(T1 x1, Array<T2> x2) -> Array<double>`
-  - `(Array<T1> x1, Array<T2> x2) -> Array<double>`
-  - `(Array<T> x1, Array<T> x2) -> Array<T>`
+  - `(x1: Array(T1), x2: T2) -> Array(double)`
+  - `(x1: T1, x2: Array(T2)) -> Array(double)`
+  - `(x1: Array(T1), x2: Array(T2)) -> Array(double)`
+  - `(x1: Array(T), x2: Array(T)) -> Array(T)`
 
 - [tan](https://docs.scipy.org/doc/numpy/reference/generated/numpy.tan.html)
   - Note: the first argument can be either an array or a scalar
