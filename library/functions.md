@@ -19,7 +19,8 @@ invokes Intrepydd functions.
 ### Subset of Python built-in functions
 
 Intrepydd supports the following subset of [Python built-in functions](https://docs.python.org/3/library/functions.html#built-in-functions):
-- [abs](https://docs.python.org/3/library/functions.html#abs)`(x: T1) -> T1`
+- [abs](https://docs.python.org/3/library/functions.html#abs)
+  - `(x: T1) -> T1`
 - [all](https://docs.python.org/3/library/functions.html#all)
 - [any](https://docs.python.org/3/library/functions.html#any)  
 - [len](https://docs.python.org/3/library/functions.html#len)
@@ -36,7 +37,7 @@ Intrepydd supports the following subset of [Python built-in functions](https://d
 
 ### Subset of NumPy libraries
 
-Intrepydd supports the following subset of NumPy libraries. Each function name points to the Numpy reference page for the function, and can have some bullets to note its prototype in Intrepydd and other differences from the Numpy version. `T`, `T1` etc stand for either `int32`, `int64`, `float32`, `float64` in function prototype.
+Intrepydd supports the following subset of NumPy libraries. Each function name points to the Numpy reference page for the function, and can have some bullets to note its prototype in Intrepydd and other differences from the Numpy version. 
 - [acos](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccos.html)
   - Note: the first argument can be either an array or a scalar
 - [add](https://docs.scipy.org/doc/numpy/reference/generated/numpy.add.html)
