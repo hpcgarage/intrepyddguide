@@ -118,14 +118,14 @@ Currently only float64 type is supported for the data type of sparse array.
 - [spmm(spm1, spm2)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
   - Return the matrix product of sparse matrices spm1 and spm2 as a sparse matrix.
 - [spmm_dense(spm1 [/ arr1], spm2 [/ arr2])](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
-  - Return the matrix product of sparse matrices spm1 and spm2 a dense matrix.
-  - Note: either of frst or second argument can be dense 2-D matrix (Array(float64)).
+  - Return the matrix product of sparse matrices spm1 and spm2 as a dense matrix (Array(float64)).
+  - Note: either of frst or second argument can be dense matrix (Array(float64)).
 - [spm_add(spm1, spm2 [/ arr2])](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a17148c59f16d4908b17b807a959abcc5)
   - Return the element-wise sum of sparse matrices spm1 and spm2 as a sparse matrix.
-  - Note: the second argument can be dense 2-D matrix (Array(float64)).
+  - Note: the second argument can be dense matrix (Array(float64)).
 - [spm_mul(spm1, spm2 [/ arr2])](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a1fca28136b736b66fea4f09e01b199c5)
   - Return the element-wise product of sparse matrices spm1 and spm2 as a sparse matrix.
-  - Note: the second argument can be dense 2-D matrix (Array(float64)).
+  - Note: the second argument can be dense matrix (Array(float64)).
 - spm_set_item(spm, v: float64, r: int32, c: int32) 
   - Set item [r,c] of sparse matrix spm to v.
     If item [r,c] already had a nonzero entry in spm, its value is overwritten with v.
