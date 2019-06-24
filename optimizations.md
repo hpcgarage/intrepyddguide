@@ -14,6 +14,7 @@ more loops and its computation results are invariant across loop
 iterations.  For instance:
 
 ```python
+    # Example 1-1 (before loop invariant code motion)
     for val in set:
         x1 = x0.abs().sqrt()
         x2 = add(x1, val)
@@ -27,6 +28,7 @@ code) can be moved from the loop body to reduce program execution time
 and energy.
 
 ```python
+    # Example 1-1 (after loop invariant code motion)
     x1 = x0.abs().sqrt()
     for val in set:
         x2 = add(x1, val)
@@ -36,6 +38,7 @@ This situation often happens in Python, especially when a single line of
 code contains many operations, e.g.,:
 
 ```python
+    # Example 1-2 (before loop invariant code motion)
     for val in set:
         x2 = add(x2, x1 @ x1.T)
 ```
@@ -45,6 +48,7 @@ Since the results of `x1 @ x1.T` (i.e., Symmetric Rank-k Update for
 result into a temporal variable, e.g.:
 
 ```python
+    # Example 1-2 (after loop invariant code motion)
     tmp = x1 @ x1.T
     for val in set:
         x2 = add(x2, tmp)
@@ -58,6 +62,7 @@ function body is dead code, which we can simply eliminate to improve
 performance and energy.
 
 ```python
+# Example 2-1 (before dead code elimination)
 def my_func(x1: Array(float64, 2)) -> float64:
     x2 = add(x1, 1.0)  # Dead code to be eliminated
     return sum(x1)
@@ -67,6 +72,7 @@ Although such dead code fragments may not be common in general, sparse
 arrays can be a good source of this optimization opportunity.
 
 ```python
+# Example 2-2 (before element-wise dead code elimination)
 def my_func(vals: Array(float64, 1), cols: Array(int32, 1), idxs: Array(int32, 1), nrows: int32, ncols: int32,
             x2: Array(float64, 2), x3: Array(float64, 2)) -> Array(float64):
     spm1 = csr_to_spm(vals, cols, idxs, ncols)
@@ -84,6 +90,7 @@ the element `[r,c]` of `x2 @ x3`.  This can be considered as
 "element-wise" dead code to be eliminated as follow.
 
 ```python
+# Example 2-2 (after element-wise dead code elimination)
 def my_func(vals: Array(float64, 1), cols: Array(int32, 1), idxs: Array(int32, 1), nrows: int32, ncols: int32,
             x2: Array(float64, 2), x3: Array(float64, 2)) -> Array(float64):
     spm2 = empty_spm(nrows, ncols)
