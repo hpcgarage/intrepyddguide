@@ -50,13 +50,13 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
   
 - [allclose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html)
   - `(arr: Array(T), eps: T) -> bool`
-<!---
+<!--
  - [argmin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmin.html)
   - `(Array<T> a) -> List<int>`
 - [argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html)
   - `(Array<T> a) -> List<int>`
 NOTE: uncomment later (see issue #39 in gatech git repo)
---->
+-->
 - [asin](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arcsin.html)
   - `(arr: Array(T)) -> Array(double)`
   - `(val: T) -> double`
