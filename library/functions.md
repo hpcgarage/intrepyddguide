@@ -76,15 +76,27 @@ NOTE: uncomment later (see issue #39 in gatech git repo)
   - `(shape: List(int32), dtype: T) -> Array()`
   - `(shape: List(int64), dtype: T) -> Array()`
   - `(shape: int64, dtype: T) -> Array()`
-  - Note: argument `order` is not supported. `dtype` is supported in another way.
+  - Note: argument `order` is not supported. `dtype` is supported by specifying a number of desired type.
   - Example: `empty([2,3], int32())`
 - [eq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array_equal.html)
+  - `(x1: Array(T1), x2: T2) -> Array(bool)`
+  - `(x1: T1, x2: Array(T2)) -> Array(bool)`
+  - `(x1: Array(T1), x2: Array(T2)) -> Array(bool)`
+
 - [exp](https://docs.scipy.org/doc/numpy/reference/generated/numpy.exp.html)
+  - `(arr: Array(T)) -> Array(double)`
+  - `(val: T) -> double`
+
   - Note: the first argument can be either an array or a scalar
 - [float32](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
   - Convert a number to float32 type
+  - `() -> float32`
+  - `(x: T) -> float32`
+
 - [float64](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
   - Convert a number to float64 type
+  - `() -> float64`
+  - `(x: T) -> float64`  
 - [ge](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater_equal.html)
 - [gt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater.html)
 - [innerprod](https://docs.s()https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.htmlcipy.org/doc/numpy/reference/generated/numpy.ma.innerproduct.html)
@@ -132,6 +144,11 @@ NOTE: uncomment later (see issue #39 in gatech git repo)
   - `(val: T) -> double`
 - [transpose](https://docs.scipy.org/doc/numpy/reference/generated/numpy.transpose.html)
 - [zeros](https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html)
+  - `(shape: List(int32), dtype: T) -> Array()`
+  - `(shape: List(int64), dtype: T) -> Array()`
+  - `(shape: int64, dtype: T) -> Array()`
+  - Note: argument `order` is not supported. `dtype` is supported by specifying a number of desired type.
+  - Example: `empty([2,3], int32())`
 - [@](https://docs.scipy.org/doc/numpy/reference/generated/numpy.matmul.html)
   - Syntax sugar for matrix matrix multiplication
   - Equivalent function is `matmult`
