@@ -1,52 +1,56 @@
-The following sections show a set of program optimization techniques that
-aim at the improvements of performance and energy while keeping
-the underlying algorithms unchanged.
-1. Loop invariant code motion
-2. Dead code elimination (general case and sparse element-wise)
-3. Loop fusion
-4. Loop permutation
-5. Parallelization
+The following sections summarize a set of  optimization techniques that
+aim to improve the performance and energy of an Intrepydd kernel.  The
+algorithm improvement examples represent two simple possibilities.
+Many other such improvements are possible, depending on the algorithms
+that you are working on.
+1. Algorithmic improvement -- Loop Invariant Code Motion (LICM)
+2. Algorithmic improvement -- Dead Code Elimination (DCE), including element-based DCE for sparse matrices
+3. Parallelization
+4. Locality optimizations
+
+ using pfor loops to reduce the delay term in the goal metric via parallelism,
+   and also fusing/merging loops to reduce the energy term with
+   improved locality, e.g., by replacing multiple passes over an array
+   by a single pass.
 
 ### 1. Loop invariant code motion
 
-"Loop invariant code" is the code fragment that is enclosed one or
-more loops and its computation results are invariant across loop
-iterations.  For instance:
-
+"Loop invariant code" refers to subcomputations that redundantly compute the same
+value in different iterations of a loop.  Consider the following
+Intrepydd code example:
 ```python
     # Example 1-1 (before loop invariant code motion)
     for val in set:
         x1 = x0.abs().sqrt()
         x2 = add(x1, val)
 ```
-
-The first statement in the loop computes element-wise abs and sqrt of
-array `x0` and stores the results in array `x1`.  Here the values of
-`x0` are invariant across iterations, and hence the results stored in
-`x1` are also invariant.  Such computations (i.e., loop invariant
-code) can be moved from the loop body to reduce program execution time
-and energy.
-
+The first statement in the loop computes the element-wise abs and sqrt of
+array `x0` and stores the result in array `x1`.  In this example.  the value of
+`x0` is invariant across iteration of the for loop, and hence the result computed in
+`x1` is also invariant.  Such computations (i.e., loop invariant
+code) can be moved outside the loop body as follows, to reduce program execution time
+and energy:
 ```python
     # Example 1-1 (after loop invariant code motion)
     x1 = x0.abs().sqrt()
     for val in set:
         x2 = add(x1, val)
 ```
+After the LICM, there are fewer operations performed by the algorithm because
+the operations to evaluate `x0.abs().sqrt()` are only performed once,
+instead of `|set|` times.
 
-This situation often happens in Python, especially when a single line of
-code contains many operations, e.g.,:
-
+There can be many opportunities for LICM in Python and Intrepydd
+code, some of which may require the introduction of a new "temporary" variable.  Another example is as follows:
 ```python
     # Example 1-2 (before loop invariant code motion)
     for val in set:
         x2 = add(x2, x1 @ x1.T)
 ```
-
-Since the results of `x1 @ x1.T` (i.e., Symmetric Rank-k Update for
-`x1`) are loop invariant, we can move this computation by storing its
-result into a temporal variable, e.g.:
-
+Since the result of `x1 @ x1.T` (i.e., Symmetric Rank-k Update for
+`x1`) is loop invariant, we can move this computation outside the loop
+by storing its
+result into a temporary variable as follows:
 ```python
     # Example 1-2 (after loop invariant code motion)
     tmp = x1 @ x1.T
@@ -54,7 +58,7 @@ result into a temporal variable, e.g.:
         x2 = add(x2, tmp)
 ```
 
-### 2. Dead code elimination (general case and sparse element-wise)
+### 2. Algorithmic improvement -- Dead Code Elimination (DCE), including element-based DCE for sparse matrices
 
 "Dead code" is the code fragment whose result is unused after its
 definition.  For instance, the first statement in the following
@@ -108,8 +112,6 @@ If the sparsity of `spm2` is 1%, we can simply remove the 99% of
 matrix-matrix multiply `x2 @ x3` as the manner of dead code
 elimination in the above code.
 
-### 3. Loop fusion
+### 3. Parallelization 
 
-### 4. Loop permutation
-
-### 5. Parallelization
+### 4. Locality optimizations
