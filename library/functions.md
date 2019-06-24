@@ -83,6 +83,10 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
   - `(Array<T> x1, Array<T> x2) -> Array<T>`
 - [neq](https://docs.scipy.org/doc/numpy/reference/generated/numpy.not_equal.html)
 - [pow](https://docs.scipy.org/doc/numpy/reference/generated/numpy.power.html)
+  - `(Array<T1> x1, T2 x2) -> Array<double>`
+  - `(T1 x1, Array<T2> x2) -> Array<double>`
+  - `(Array<T1> x1, Array<T2> x2) -> Array<double>`
+  - `(T1 x1, T2 x2) -> double`
   - The first argument can be either an array or a scalar
 - [prod](https://docs.scipy.org/doc/numpy/reference/generated/numpy.prod.html)
 - [shape](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html)
