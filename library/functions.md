@@ -186,8 +186,10 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 ### Subset of CombBLAS libraries
 
 Intrepydd supports the following subset of CombBLAS libraries.
-Currently, the supported data type of sparse array is only float64 type, i.e., `SparseArray(float64)`,
-and hence we omit the type annotation of sparse array arguments (spm, spm1, spm2) in the following.
+Currently, the supported data type of sparse array is only `float64`
+type, and hence we omit the type annotation `SparseArray(float64)` for
+sparse array arguments `spm`, `spm1`, `spm2` and `Array(float64)` for
+dense array argument `arr` in the following.
 
 - [csr_to_spm](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a3fe039448e6e15c8949f066eea204efa)
   - `(values: Array(float64), columns: Array(int32), indexes: Array(int32), nc: int32) -> SparseArray(float64)`
