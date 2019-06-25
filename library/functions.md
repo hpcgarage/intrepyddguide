@@ -185,7 +185,8 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 
 ### Subset of CombBLAS libraries
 Intrepydd supports the following subset of CombBLAS libraries.
-Currently only float64 type is supported for the data type of sparse array.
+Currently, the supported data type of sparse array is only float64 type, SparseArray(float64),
+and hence we omit the type annotation of sparse array arguments (spm, spm1, spm2) in the following.
 - [csr_to_spm](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a3fe039448e6e15c8949f066eea204efa)
   - `(values: Array(float64), columns: Array(int32), indexes: Array(int32), nc: int32) -> SparseArray(float64)`
   - Construct and return a sparse matrix from three 1-D arrays and a scalar --- values,
@@ -195,38 +196,38 @@ Currently only float64 type is supported for the data type of sparse array.
   - `(nr: int32, nc: int32) -> SparseArray(float64)`
   - Construct and return an empty sparse matrix with nr rows and nc columns.
 - [spmm](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
-  - `(spm1: SparseArray(float64), spm2: SparseArray(float64)) -> SparseArray(float64)`
+  - `(spm1, spm2) -> SparseArray(float64)`
   - Return the matrix product of sparse matrices spm1 and spm2 as a sparse matrix.
 - [spmm_dense](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
-  - `(spm1: SparseArray(float64), spm2: SparseArray(float64)) -> Array(float64)`
-  - `(spm: SparseArray(float64), arr: Array(float64)) -> Array(float64)`
-  - `(arr: Array(float64), spm: SparseArray(float64)) -> Array(float64)`
+  - `(spm1, spm2) -> Array(float64)`
+  - `(spm, arr: Array(float64)) -> Array(float64)`
+  - `(arr: Array(float64), spm) -> Array(float64)`
   - Return the matrix product of sparse matrices spm1 and spm2 as a dense matrix.
     - Either of frst or second argument can be dense matrix.
 - [spm_add](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a17148c59f16d4908b17b807a959abcc5)
-  - `(spm1: SparseArray(float64), spm2: SparseArray(float64)) -> SparseArray(float64)`
-  - `(spm: SparseArray(float64), arr: Array(float64)) -> SparseArray(float64)`
+  - `(spm1, spm2) -> SparseArray(float64)`
+  - `(spm, arr: Array(float64)) -> SparseArray(float64)`
   - Return the element-wise sum of sparse matrices spm1 and spm2 as a sparse matrix.
     - The second argument can be dense matrix.
 - [spm_mul](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a1fca28136b736b66fea4f09e01b199c5)
-  - `(spm1: SparseArray(float64), spm2: SparseArray(float64)) -> SparseArray(float64)`
-  - `(spm: SparseArray(float64), arr: Array(float64)) -> SparseArray(float64)`
+  - `(spm1, spm2) -> SparseArray(float64)`
+  - `(spm, arr: Array(float64)) -> SparseArray(float64)`
   - Return the element-wise product of sparse matrices spm1 and spm2 as a sparse matrix.
     - The second argument can be dense matrix.
 - spm_set_item
-  - `(spm: SparseArray(float64), v: float64, r: int32, c: int32)`
+  - `(spm, v: float64, r: int32, c: int32)`
   - Set item [r,c] of sparse matrix spm to v.
     If item [r,c] already had a nonzero entry in spm, its value is overwritten with v.
 - spm_set_item_unsafe
-  - `(spm: SparseArray(float64), v: float64, r: int32, c: int32)`
+  - `(spm, v: float64, r: int32, c: int32)`
   - Set item [r,c] of sparse matrix spm to v, and assumes without checking that item [r,c]
     does not have a nonzero entry in spm.
 - spm_to_csr
-  - `(spm: SparseArray(float64), values: Array(float64), columns: Array(int32), indexes: Array(int32))`
+  - `(spm, values: Array(float64), columns: Array(int32), indexes: Array(int32))`
   - Takes sparse matrix spm as input, and fills in three 1-D arrays --- values,
     columns, indexes --- with the values corresponding to a CSR representation of spm.
 - [spmv](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#af6d7c2a1ec21df8ebdd4cff3eb728fc7)
-  - `(spm: SparseArray(float64), arr: Array(float64)) -> Array(float64)`
+  - `(spm, arr: Array(float64)) -> Array(float64)`
   - Returns the product of sparse matrix spm and dense vector arr as a new dense vector.
 
 <!---
