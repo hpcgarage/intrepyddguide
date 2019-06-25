@@ -31,6 +31,6 @@ extension).
    Joules-Seconds^2).
 9. Try improving the performance of the code in the .pydd file by
    algorithmic improvements, parallelization and locality
-   optimizations.
+   optimizations suggested in the page on [Code optimization techniques](./optimizations).
 10. Repeat steps 7-9 for the current performance-critical code region.
 11. Repeat steps 2-10 for additional performance-critical code regions.
