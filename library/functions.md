@@ -201,7 +201,6 @@ Currently only float64 type is supported for the data type of sparse array.
   - `(spm1: SparseArray(float64), spm2: SparseArray(float64)) -> Array(float64)`
   - `(spm: SparseArray(float64), arr: Array(float64)) -> Array(float64)`
   - `(arr: Array(float64), spm: SparseArray(float64)) -> Array(float64)`
-  - `(arr1: Array(float64), arr2: Array(float64)) -> Array(float64)`
   - Return the matrix product of sparse matrices spm1 and spm2 as a dense matrix.
   - Note: either of frst or second argument can be dense matrix.
 - [spm_add](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a17148c59f16d4908b17b807a959abcc5)
