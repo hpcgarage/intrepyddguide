@@ -1,14 +1,16 @@
 The following sections summarize a set of  optimization techniques that
-aim to improve the performance and energy of an Intrepydd kernel.  The
-algorithm improvement examples represent two simple possibilities.
-Many other such improvements are possible, depending on the algorithms
-that you are working on.
+aim to improve the performance and energy of an Intrepydd kernel:
 1. Algorithmic improvement -- Loop Invariant Code Motion (LICM)
 2. Algorithmic improvement -- Dead Code Elimination (DCE), including element-based DCE for sparse matrices
 3. Parallelization
 4. Locality optimizations
 
-### 1. Loop invariant code motion
+The
+algorithmic improvement examples in sections 1 and 2 represent two simple approaches.
+Many other related improvements are possible, depending on the algorithms
+that you are working on. 
+
+### 1. Algorithmic improvement -- Loop Invariant Code Motion (LICM)
 
 "Loop invariant code" refers to subcomputations that redundantly compute the same
 value in different iterations of a loop.  Consider the following
@@ -22,7 +24,7 @@ Intrepydd code example:
 ```
 The first statement in the loop computes the element-wise abs and sqrt of
 array `x0` and stores the result in array `x1`.  In this example.  the value of
-`x0` is invariant across iteration of the for loop, and hence the result computed in
+`x0` is invariant across iterations of the for loop, and hence the result computed in
 `x1` is also invariant.  Such loop-invariant computations can be moved outside the loop body as follows, to reduce program execution time
 and energy:
 ```python
@@ -80,11 +82,11 @@ def my_func(vals: Array(float64, 1), cols: Array(int32, 1), idxs: Array(int32, 1
 
 The second statement of function body first computes the matrix-matrix
 multiply `x2 @ x3` and then applies element-wise multiplication with
-sparse matrix `spm1`, which is constructed via `csr_to_spm` function
-at the first line.
+sparse matrix `spm1`, which is constructed by the `csr_to_spm` function
+in the first line.
 
 In this example, we don't need to compute the entire matrix product, `x2 @ x3`,
-because `spm2[r,c]` is always zero if `spm1[r,c]` is zero regardless of
+because `spm2[r,c]` is always zero if `spm1[r,c]` is zero, regardless of
 the value of  element `[r,c]` of `x2 @ x3`.  This can be considered as
 an opportunity for
 partial dead code elimination as shown below:
@@ -102,7 +104,7 @@ def my_func(vals: Array(float64, 1), cols: Array(int32, 1), idxs: Array(int32, 1
                 tmp += x2[r][k] * x3[k][c]  # compute element [r,c] of x2 @ x3
             spm2.set_item_unsafe(v * tmp, r, c)
 ```
-For example, if the sparsity of `spm2` is 1%, we can  remove the 99% of
+For example, if the sparsity of `spm2` is 1%, we can  remove 99% of
 the computation needed for the matrix-matrix product `x2 @ x3` by
 using the partial dead code elimination illustrated above.
 
@@ -131,7 +133,8 @@ for sufficiently large values of `n` and `m`:
 
 While parallelizing the inner j-loop is also legal, it is not efficient
 because there is some intrinsic overhead in creating a `pfor` loop,
-which gets amplified when the `pfor` loop is in the innermost location:
+which gets amplified when the `pfor` loop is in the innermost location
+as shown below:
 ```python
 # Example 3-3 (inefficient fine-grained loop parallelization)
     for i in range(1, n-1):       # Sequential
@@ -143,7 +146,7 @@ which gets amplified when the `pfor` loop is in the innermost location:
 
 Finally, an important way to further reduce energy and delay is to
 improve the locality in an Intrepydd kernel by 1) ensuring that
-array elements are traversed in a row-major order, and 2) replacing multiple passes over an array
+array elements are traversed in a row-major order as much as possible, and 2) replacing multiple passes over an array
 by a single pass.
 
 For 1), a common code transformation that is used is loop permutation,
@@ -151,19 +154,19 @@ as illustrated in the following examples:
 ```python
 # Example 4-1 (before loop permutation)
     for i in range(n):
-        for j in range(m):  # Column-major on: A[j,i], B[j,i], C[j,i]
+        for j in range(m):  # Column-major accesses on: A[j,i], B[j,i], C[j,i]
             D[i,j] = A[j,i] + B[j,i] + C[j,i]
 ```
 
 Since the above loop nest has efficient row-major accesses on `D[i,j]`
 but inefficient column-major accesses on `A[j,i], B[j,i], C[j,i]`, it
-will be  anet win to permute (interchange) the two loops to obtain
+will be a net win to permute (interchange) the two loops to obtain
 the following loop nest consisting of row-major accesses on  `A[j,i],
 B[j,i], C[j,i]` and column-major accesses on `D[i,j]`:
 ```python
 # Example 4-1 (after loop permutation)
     for j in range(m):
-        for i in range(n):  # Column-Major access on: D[i,j]
+        for i in range(n):  # Column-major access on: D[i,j]
             D[i,j] = A[j,i] + B[j,i] + C[j,i]
 ```
 
@@ -223,7 +226,7 @@ the following example:
             G[i,j] = F[i,j] / 5.0
 ```
 After fusion, we obtain two loop nests instead of four loop nests, as
-shown below.  The main reason why direct loop fusion cannot be
+shown below.  The main reason why  loop fusion cannot be
 performed on all loops is that the first and second fused loop nests
 have different loop bounds:
 ```python
