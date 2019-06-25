@@ -187,9 +187,9 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 Intrepydd supports the following subset of CombBLAS libraries.
 Currently only float64 type is supported for the data type of sparse array.
 - [csr_to_spm](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a3fe039448e6e15c8949f066eea204efa)
-  - `(arr_values: Array(float64), arr_columns: Array(int32), arr_indexes: Array(int32), nc: int32) -> SparseArray(float64)`
-  - Construct and return a sparse matrix from three 1-D arrays and a scalar --- arr_values,
-    arr_columns, arr_indexes, and nc (number of columns) --- with the values corresponding
+  - `(vals: Array(float64), cols: Array(int32), idxs: Array(int32), nc: int32) -> SparseArray(float64)`
+  - Construct and return a sparse matrix from three 1-D arrays and a scalar --- vals,
+    cols, idxs, and nc (number of columns) --- with the values corresponding
     to a CSR representation of spm.
 - [empty_spm(nr: int32, nc: int32)](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#aec83f0568245560ac797cbf181c47051)
   - Construct and return an empty sparse matrix with nr rows and nc columns.
