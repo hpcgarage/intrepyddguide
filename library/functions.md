@@ -184,9 +184,11 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
   - Equivalent function is `matmult`
 
 ### Subset of CombBLAS libraries
+
 Intrepydd supports the following subset of CombBLAS libraries.
-Currently, the supported data type of sparse array is only float64 type, SparseArray(float64),
+Currently, the supported data type of sparse array is only float64 type, i.e., `SparseArray(float64)`,
 and hence we omit the type annotation of sparse array arguments (spm, spm1, spm2) in the following.
+
 - [csr_to_spm](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a3fe039448e6e15c8949f066eea204efa)
   - `(values: Array(float64), columns: Array(int32), indexes: Array(int32), nc: int32) -> SparseArray(float64)`
   - Construct and return a sparse matrix from three 1-D arrays and a scalar --- values,
