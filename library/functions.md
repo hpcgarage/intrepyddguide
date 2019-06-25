@@ -187,20 +187,20 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 
 Intrepydd supports the following subset of CombBLAS libraries.
 Currently, the supported data type of sparse array is only `float64`
-type, and hence we omit the type annotation `SparseArray(float64)` for
+type, and hence we omit the type annotation `SparseMat(float64)` for
 sparse array arguments `spm`, `spm1`, `spm2` and `Array(float64)` for
 dense array argument `arr` in the following.
 
 - [csr_to_spm](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a3fe039448e6e15c8949f066eea204efa)
-  - `(values: Array(float64), columns: Array(int32), indexes: Array(int32), nc: int32) -> SparseArray(float64)`
+  - `(values: Array(float64), columns: Array(int32), indexes: Array(int32), nc: int32) -> SparseMat(float64)`
   - Construct and return a sparse matrix from three 1-D arrays and a scalar --- values,
     columns, indexes, and nc (number of columns) --- with the values corresponding
     to a CSR representation of spm.
 - [empty_spm](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#aec83f0568245560ac797cbf181c47051)
-  - `(nr: int32, nc: int32) -> SparseArray(float64)`
+  - `(nr: int32, nc: int32) -> SparseMat(float64)`
   - Construct and return an empty sparse matrix with nr rows and nc columns.
 - [spmm](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
-  - `(spm1, spm2) -> SparseArray(float64)`
+  - `(spm1, spm2) -> SparseMat(float64)`
   - Return the matrix product of sparse matrices spm1 and spm2 as a sparse matrix.
 - [spmm_dense](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
   - `(spm1, spm2) -> Array(float64)`
@@ -209,13 +209,13 @@ dense array argument `arr` in the following.
   - Return the matrix product of sparse matrices spm1 and spm2 as a dense matrix.
     - Either of frst or second argument can be dense matrix.
 - [spm_add](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a17148c59f16d4908b17b807a959abcc5)
-  - `(spm1, spm2) -> SparseArray(float64)`
-  - `(spm, arr) -> SparseArray(float64)`
+  - `(spm1, spm2) -> SparseMat(float64)`
+  - `(spm, arr) -> SparseMat(float64)`
   - Return the element-wise sum of sparse matrices spm1 and spm2 as a sparse matrix.
     - The second argument can be dense matrix.
 - [spm_mul](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a1fca28136b736b66fea4f09e01b199c5)
-  - `(spm1, spm2) -> SparseArray(float64)`
-  - `(spm, arr) -> SparseArray(float64)`
+  - `(spm1, spm2) -> SparseMat(float64)`
+  - `(spm, arr) -> SparseMat(float64)`
   - Return the element-wise product of sparse matrices spm1 and spm2 as a sparse matrix.
     - The second argument can be dense matrix.
 - spm_set_item
