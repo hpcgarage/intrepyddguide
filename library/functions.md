@@ -202,17 +202,17 @@ Currently only float64 type is supported for the data type of sparse array.
   - `(spm: SparseArray(float64), arr: Array(float64)) -> Array(float64)`
   - `(arr: Array(float64), spm: SparseArray(float64)) -> Array(float64)`
   - Return the matrix product of sparse matrices spm1 and spm2 as a dense matrix.
-    - Note: either of frst or second argument can be dense matrix.
+    - Either of frst or second argument can be dense matrix.
 - [spm_add](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a17148c59f16d4908b17b807a959abcc5)
   - `(spm1: SparseArray(float64), spm2: SparseArray(float64)) -> SparseArray(float64)`
   - `(spm: SparseArray(float64), arr: Array(float64)) -> SparseArray(float64)`
   - Return the element-wise sum of sparse matrices spm1 and spm2 as a sparse matrix.
-    - Note: the second argument can be dense matrix.
+    - The second argument can be dense matrix.
 - [spm_mul](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a1fca28136b736b66fea4f09e01b199c5)
   - `(spm1: SparseArray(float64), spm2: SparseArray(float64)) -> SparseArray(float64)`
   - `(spm: SparseArray(float64), arr: Array(float64)) -> SparseArray(float64)`
   - Return the element-wise product of sparse matrices spm1 and spm2 as a sparse matrix.
-    - Note: the second argument can be dense matrix.
+    - The second argument can be dense matrix.
 - spm_set_item
   - `(spm: SparseArray(float64), v: float64, r: int32, c: int32)`
   - Set item [r,c] of sparse matrix spm to v.
