@@ -188,8 +188,8 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 Intrepydd supports the following subset of CombBLAS libraries.
 Currently, the supported data type of sparse array is only `float64`
 type, and hence we omit the type annotation `SparseArray(float64)` for
-sparse array arguments `spm`, `spm1`, `spm2` and `Array(float64)` for
-dense array argument `arr` in the following.
+sparse array arguments (`spm`, `spm1`, `spm2`) and `Array(float64)` for
+dense array argument (`arr`) in the following.
 
 - [csr_to_spm](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a3fe039448e6e15c8949f066eea204efa)
   - `(values: Array(float64), columns: Array(int32), indexes: Array(int32), nc: int32) -> SparseArray(float64)`
@@ -204,18 +204,18 @@ dense array argument `arr` in the following.
   - Return the matrix product of sparse matrices spm1 and spm2 as a sparse matrix.
 - [spmm_dense](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
   - `(spm1, spm2) -> Array(float64)`
-  - `(spm, arr: Array(float64)) -> Array(float64)`
-  - `(arr: Array(float64), spm) -> Array(float64)`
+  - `(spm, arr) -> Array(float64)`
+  - `(arr, spm) -> Array(float64)`
   - Return the matrix product of sparse matrices spm1 and spm2 as a dense matrix.
     - Either of frst or second argument can be dense matrix.
 - [spm_add](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a17148c59f16d4908b17b807a959abcc5)
   - `(spm1, spm2) -> SparseArray(float64)`
-  - `(spm, arr: Array(float64)) -> SparseArray(float64)`
+  - `(spm, arr) -> SparseArray(float64)`
   - Return the element-wise sum of sparse matrices spm1 and spm2 as a sparse matrix.
     - The second argument can be dense matrix.
 - [spm_mul](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a1fca28136b736b66fea4f09e01b199c5)
   - `(spm1, spm2) -> SparseArray(float64)`
-  - `(spm, arr: Array(float64)) -> SparseArray(float64)`
+  - `(spm, arr) -> SparseArray(float64)`
   - Return the element-wise product of sparse matrices spm1 and spm2 as a sparse matrix.
     - The second argument can be dense matrix.
 - spm_set_item
@@ -231,7 +231,7 @@ dense array argument `arr` in the following.
   - Takes sparse matrix spm as input, and fills in three 1-D arrays --- values,
     columns, indexes --- with the values corresponding to a CSR representation of spm.
 - [spmv](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#af6d7c2a1ec21df8ebdd4cff3eb728fc7)
-  - `(spm, arr: Array(float64)) -> Array(float64)`
+  - `(spm, arr) -> Array(float64)`
   - Returns the product of sparse matrix spm and dense vector arr as a new dense vector.
 
 <!---
