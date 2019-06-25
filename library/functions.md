@@ -199,19 +199,19 @@ Currently only float64 type is supported for the data type of sparse array.
   - Return the matrix product of sparse matrices spm1 and spm2 as a sparse matrix.
 - [spmm_dense](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a981ab02ac32e92fcf6bbc193bfdf3bd5)
   - `(spm1: SparseArray(float64), spm2: SparseArray(float64)) -> Array(float64)`
-  - `(spm1: SparseArray(float64), arr2: Array(float64)) -> Array(float64)`
-  - `(arr1: Array(float64), spm2: SparseArray(float64)) -> Array(float64)`
+  - `(spm: SparseArray(float64), arr: Array(float64)) -> Array(float64)`
+  - `(arr: Array(float64), spm: SparseArray(float64)) -> Array(float64)`
   - `(arr1: Array(float64), arr2: Array(float64)) -> Array(float64)`
   - Return the matrix product of sparse matrices spm1 and spm2 as a dense matrix (Array(float64)).
   - Note: either of frst or second argument can be dense matrix (Array(float64)).
 - [spm_add](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a17148c59f16d4908b17b807a959abcc5)
   - `(spm1: SparseArray(float64), spm2: SparseArray(float64)) -> SparseArray(float64)`
-  - `(spm1: SparseArray(float64), arr2: Array(float64)) -> SparseArray(float64)`
+  - `(spm: SparseArray(float64), arr: Array(float64)) -> SparseArray(float64)`
   - Return the element-wise sum of sparse matrices spm1 and spm2 as a sparse matrix.
   - Note: the second argument can be dense matrix (Array(float64)).
 - [spm_mul](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/namespacecombblas.html#a1fca28136b736b66fea4f09e01b199c5)
   - `(spm1: SparseArray(float64), spm2: SparseArray(float64)) -> SparseArray(float64)`
-  - `(spm1: SparseArray(float64), arr2: Array(float64)) -> SparseArray(float64)`
+  - `(spm: SparseArray(float64), arr: Array(float64)) -> SparseArray(float64)`
   - Return the element-wise product of sparse matrices spm1 and spm2 as a sparse matrix.
   - Note: the second argument can be dense matrix (Array(float64)).
 - spm_set_item
