@@ -92,13 +92,13 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
   - `(val: T) -> double`
   - Note: the first argument can be either an array or a scalar
 - [float32](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
-  - Convert a number to float32 type
   - `() -> float32`
   - `(x: T) -> float32`
+  - Convert a number to float32 type 
 - [float64](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
-  - Convert a number to float64 type
   - `() -> float64`
   - `(x: T) -> float64`  
+  - Convert a number to float64 type 
 - [ge](https://docs.scipy.org/doc/numpy/reference/generated/numpy.greater_equal.html)
   - `(x1: Array(T1), x2: T2) -> Array(bool)`
   - `(x1: T1, x2: Array(T2)) -> Array(bool)`
@@ -110,13 +110,13 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 - [innerprod](https://docs.s()https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.htmlcipy.org/doc/numpy/reference/generated/numpy.ma.innerproduct.html)
   - `(arr1: Array(T1), arr2: Array(T2)) -> double`
 - [int32](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
-  - Note: Convert a number to int32 type
   - `() -> int32`
   - `(x: T) -> int32`  
+  - Convert a number to int32 type 
 - [int64](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
-  - Note: Convert a number to int64 type
   - `() -> int64`
   - `(x: T) -> int64`  
+  - Convert a number to int64 type 
 - [isinf](https://docs.scipy.org/doc/numpy/reference/generated/numpy.isinf.html)
   - `(arr: Array(T)) -> Array(bool)`
   - `(val: T) -> bool`
