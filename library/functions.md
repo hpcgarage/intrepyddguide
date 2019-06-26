@@ -233,6 +233,9 @@ matrices in Intrepydd.
   - `(spm, arr) -> Array(float64)`
   - Returns the product of sparse matrix `spm` and dense vector `arr` as a new dense vector.
 
+Note: arguments `spm`, `spm1`, and `spm2` assume `SparseMat(float64)`
+data type while `arr` assumes `Array(float64)` data type.
+
 <!---
 ### API Wrappers 
 The built-in functions are listed here in alphabetical order.
