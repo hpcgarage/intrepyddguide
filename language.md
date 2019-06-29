@@ -28,16 +28,18 @@ Jupyter-based tutorials and the Recommended steps in using the Intrepydd v0.2 re
 
 Intrepydd v0.2 requires that _each Intrepydd function parameter and
 return value be declared with one of the following data types:_
-1. _Primitive types:_ int32, int64, float32, float64.  These are
+1. _Primitive types:_ bool, int32, int64, float32, float64.  The last four are
    fixed-precision numeric types.  Intrepydd v0.2 does not support
    Python’s multi-precision integers.  Primitive types can be passed
    to an Intrepydd function from a Python program, and also returned
    to a Python program from an Intrepydd function.
 2. _Dense arrays of primitive types_, which correspond to [NumPy arrays](https://www.numpy.org/devdocs/user/basics.creation.html).  A NumPy array can be allocated in
-  the Python main program and passed to an Intrepydd function without
-  copying array data.  It can also be allocated in Intrepydd code and
-  returned to the Python main program without
-  copying array data.
+  the Python main program and passed to an Intrepydd function as an
+  Intrepydd array without
+  copying array data.  An Intrepydd array can also be allocated in Intrepydd code and
+  returned to the Python main program as a NumPy array without
+  copying array data.  Intrepydd arrays assume a row-major ordering,
+  which is the default element order for NumPy arrays.
 3. _Lists of primitive types:_  While lists in Intrepydd v0.2 bear
      some similarity to Python lists, there are many important
      differences.  Intrepydd v0.2 lists are homogeneous, i.e., all elements must
