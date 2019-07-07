@@ -14,7 +14,7 @@ You can use Intrepydd from within Jupyter. The following collection of notebooks
 
 ### Setup info for connecting Jupyter to Docker instance running Intrepydd
 
-Since Jupyter is usually run on a web browser on your local machine, the following three steps need to be performed to enable Jupyter to connect with a Docker instance running Intrepydd.  In the following, we will assume that the Docker instance is running on a server named ubuntu@54.198.41.116, that is representative of a typical EC2 instance.  The actual path names may vary depending on the server instance that you use.
+Since Jupyter is usually run on a web browser on your local machine, the following three steps need to be performed to enable Jupyter to connect with a Docker instance running Intrepydd.  In the following, we will assume that the Docker instance is running on a server named ubuntu@54.198.41.116, that is representative of a typical EC2 instance, and the ssh identification file is key_CqPMRtDoyTYq.pem located in the current directory.  The actual path names may vary depending on the server instance that you use.
 
 Step 1: ssh to the server and run Jupyter via Docker
 ```
