@@ -4,6 +4,8 @@ You can use Intrepydd from within Jupyter. The following collection of notebooks
 
 **Video Preview.** For a quick video overview, which goes through the k-means case study below, [click here (YouTube)](https://www.youtube.com/watch?v=00CkXStroOk).
 
+**Functions Reference.** For a Jupyter-based summary and demo of all Intrepydd-supported functions, refer to the [functions reference](./notebooks/functions-reference.ipynb) or its [preview](https://github.com/hpcgarage/intrepyddguide/blob/master/notebooks/functions-reference.ipynb).
+
 > Below, the title links directly to a Jupyter notebook. If, instead, you just want to preview the notebook, click the _"Preview"_ links, which redirect you to the GitHub versions.
 
 1. ["Hello, world!"](./notebooks/001-hello-world.ipynb) -- [Preview](https://github.com/hpcgarage/intrepyddguide/blob/master/notebooks/001-hello-world.ipynb)
