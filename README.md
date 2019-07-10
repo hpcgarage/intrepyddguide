@@ -15,6 +15,8 @@ May 2019, and will be updated as later releases become available.
 **Video Preview.** For a quick screencast video overview, which goes through the
   k-means case study in the [Jupyter-based tutorial](./tutorial), [click here (YouTube)](https://www.youtube.com/watch?v=00CkXStroOk).
 
+**Functions Reference.** For a Jupyter-based summary and demo of many of the Intrepydd-supported functions, refer to the [functions reference](./notebooks/functions-reference.ipynb) or its [preview](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/functions-reference.ipynb). Some are not yet included (e.g., sparse matrix functions), so do refer to the complete [Intrepydd built-in functions and libraries list](https://hpcgarage.github.io/intrepyddguide/library/functions.html).
+
 **Contents**
 
 - [Language guide](./language)

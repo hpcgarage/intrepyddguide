@@ -16,6 +16,8 @@ Finally, note that all standard Python
 functions and libraries can be used without limitations in the Python main program that
 invokes Intrepydd functions.
 
+**Functions Reference.** For a Jupyter-based summary and demo of many of the Intrepydd-supported functions, refer to the [functions reference](./notebooks/functions-reference.ipynb) or its [preview](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/functions-reference.ipynb). Some are not yet included (e.g., sparse matrix functions), so do refer to the list below for the complete list of available functions and libraries.
+
 ### Subset of Python built-in functions
 
 Intrepydd supports the following subset of [Python built-in functions](https://docs.python.org/3/library/functions.html#built-in-functions):
