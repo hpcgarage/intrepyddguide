@@ -201,8 +201,8 @@ matrices in Intrepydd.  The
 [Triangle Counting](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/005-tricount3.ipynb)
 Jupyter notebook illustrates the use of Intrepydd to implement a
 sparse matrix application, especially in the sections titled
-[An Intrepydd version: Domain-specific wrappers](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/005-tricount3.ipynb#An-Intrepydd-version:-Domain-specific-wrappers)
-and [Another Intrepydd version: "lowering" the implementation](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/005-tricount3.ipynb#Another-Intrepydd-version:-%22lowering%22-the-implementation).
+"[An Intrepydd version: Domain-specific wrappers](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/005-tricount3.ipynb#An-Intrepydd-version:-Domain-specific-wrappers)"
+and "[Another Intrepydd version: "lowering" the implementation](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/005-tricount3.ipynb#Another-Intrepydd-version:-%22lowering%22-the-implementation)".
 
 
 
