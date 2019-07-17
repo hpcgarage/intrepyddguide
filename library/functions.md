@@ -16,7 +16,14 @@ Finally, note that all standard Python
 functions and libraries can be used without limitations in the Python main program that
 invokes Intrepydd functions.
 
-**Functions Reference.** For a Jupyter-based summary and demo of many of the Intrepydd-supported functions, refer to the [functions reference](./notebooks/functions-reference.ipynb) or its [preview](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/functions-reference.ipynb). Some are not yet included (e.g., sparse matrix functions), so do refer to the list below for the complete list of available functions and libraries.
+**Functions Reference.** For a Jupyter-based summary and demo of many
+  of the Intrepydd-supported functions, refer to the
+  [functions reference](./notebooks/functions-reference.ipynb) or its
+  [preview](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/functions-reference.ipynb). The
+  complete list of functions and libraries available in Intrepydd is
+  included below.  Many of the entries also include a link to a
+  standard library API that is equivalent, or closely related, to the
+  Intrepydd API.
 
 ### Subset of Python built-in functions
 
@@ -185,12 +192,19 @@ Intrepydd supports the following subset of NumPy libraries. Each function name p
 - [@](https://docs.scipy.org/doc/numpy/reference/generated/numpy.matmul.html)
   - Convenient syntax for matrix-matrix multiplication (equivalent to `matmult`)
 
-### Subset of CombBLAS libraries
+### Subset of CombBLAS sparse matrix libraries
 
-Intrepydd supports the following subset of CombBLAS libraries for
+Intrepydd supports interfaces to the following subset of CombBLAS libraries for
 sparse matrices.
 Currently, only  `float64` is supported as an element type for sparse
-matrices in Intrepydd.
+matrices in Intrepydd.  The
+[Triangle Counting](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/005-tricount3.ipynb)
+Jupyter notebook illustrates the use of Intrepydd to implement a
+sparse matrix application, especially in the sections titled
+[An Intrepydd version: Domain-specific wrappers](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/005-tricount3.ipynb#An-Intrepydd-version:-Domain-specific-wrappers)
+and [Another Intrepydd version: "lowering" the implementation](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/005-tricount3.ipynb#Another-Intrepydd-version:-%22lowering%22-the-implementation).
+
+
 
 - [csr_to_spm](https://people.eecs.berkeley.edu/~aydin/CombBLAS/html/classcombblas_1_1_sp_mat.html#a3fe039448e6e15c8949f066eea204efa)
   - `(values: Array(float64), columns: Array(int32), indexes: Array(int32), nc: int32) -> SparseMat(float64)`
