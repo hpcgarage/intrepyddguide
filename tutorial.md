@@ -13,7 +13,7 @@ You can use Intrepydd from within Jupyter. The following collection of notebooks
 2. [Type specialization basics](./notebooks/002-typing-basics.ipynb) -- [Preview](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/002-typing-basics.ipynb)
 3. [Profiling basics](./notebooks/003-profiling.ipynb) -- [Preview](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/003-profiling.ipynb)
 4. [Case study: profiling and optimizing k-means](./notebooks/004-kmeans.ipynb) -- [Preview](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/004-kmeans.ipynb)
-5. [Case study: counting triangles in a graph using sparse matrices](./notebook/005-tricount3.ipynb) -- [Preview](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/005-tricount3.ipynb)
+5. [Case study: counting triangles in a graph using sparse matrices](./notebooks/005-tricount3.ipynb) -- [Preview](https://nbviewer.jupyter.org/github/hpcgarage/intrepyddguide/blob/master/notebooks/005-tricount3.ipynb)
 
 ### Setup info for connecting Jupyter to Docker instance running Intrepydd
 
