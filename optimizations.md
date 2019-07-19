@@ -101,8 +101,8 @@ def my_func(vals: Array(float64, 1), cols: Array(int32, 1), idxs: Array(int32, 1
             v = vals[i]  # element [r,c] of spm1
             tmp = 0.0
             for k in range(shape(x2,1)):
-                tmp += x2[r][k] * x3[k][c]  # compute element [r,c] of x2 @ x3
-            spm2.set_item_unsafe(v * tmp, r, c)
+                tmp += x2[r,k] * x3[k,c]  # compute element [r,c] of x2 @ x3
+            spm2.spm_set_item_unsafe(v * tmp, r, c)
 ```
 For example, if the sparsity of `spm2` is 1%, we can  remove 99% of
 the computation needed for the matrix-matrix product `x2 @ x3` by
