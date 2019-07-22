@@ -43,9 +43,7 @@ return value be declared with one of the following data types:_
 3. _Lists of primitive types:_  While lists in Intrepydd v0.2 bear
      some similarity to Python lists, there are many important
      differences.  Intrepydd v0.2 lists are homogeneous, i.e., all elements must
-	 have same primitive data type.  Also, local Intrepydd lists which can only be allocated and used
-in Intrepydd code, and cannot
-interoperate (as paratmenters or return values) with Python lists
+	 have same primitive data type. Currently Intrepydd lists can only be directly constructed or passed from the main Python program. No methods or operators are implemented for Intrepydd lists for now.
 
 
 The three Intrepydd data types listed above are inferred automatically for
